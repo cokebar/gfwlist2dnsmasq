@@ -18,7 +18,7 @@ __Note: This script now lacks testing. Use carefully. Please send issues to help
 
 Before using this script, you should install wget with SSL support first.
 
-For security reason, this script won't bypass the certification validation. You should install ca-certificates as well.
+For security reason, this script won't bypass the certificate validation. You should install ca-certificates as well.
 
 You can follow this to install them:
 
