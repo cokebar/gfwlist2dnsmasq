@@ -2,14 +2,14 @@
 
 # Name:        gfwlist2dnsmasq.sh
 # Desription:  A shell script which convert gfwlist into dnsmasq rules.
-# Version:     0.3 (2017.02.22)
+# Version:     0.4 (2017.02.23)
 # Author:      Cokebar Chi
 # Website:     https://github.com/cokebar
 
 usage() {
         cat <<-EOF
 
-    Usage: gfwlist2dnsmasq.sh [options] -f FILE
+    Usage: sh gfwlist2dnsmasq.sh [options] -f FILE
     Valid options are:
         -d <dns_ip>        DNS IP address for the GfwList Domains (Default: 127.0.0.1)
         -p <dns_port>      DNS Port for the GfwList Domains (Default: 5300)
@@ -48,6 +48,21 @@ while getopts "d:p:s:f:h" arg; do
 			;;
 	esac
 done
+
+############################## Check Dependency #############################
+
+which od sed awk base64 wget >/dev/null
+if [ $? != 0 ]; then
+	printf '\033[31mError: Missing Dependency.\nPlease check whether you have the following binaries on you system:\nod, sed, awk, base64, wget\033[m\n'
+	exit 3
+fi
+
+SYS_KERNEL=`uname -s`
+if [ $SYS_KERNEL == "Darwin"  -o $SYS_KERNEL == "FreeBSD" ]; then
+	SED_ERES='sed -E'
+else
+	SED_ERES='sed -r'
+fi
 
 ########################### Check input arguments ###########################
 
@@ -112,15 +127,15 @@ GOOGLE_DOMAIN_FILE="$TMP_DIR/google_domain.txt"
 UNIQ_DOMAIN_FILE="$TMP_DIR/gfwlist2uniq_domain.tmp"
 
 # Fetch GfwList and decode it into plain text
-echo -e 'Fetching GfwList...\c'
+printf 'Fetching GfwList...'
 mkdir $TMP_DIR
 wget -q -O$BASE64_FILE $BASE_URL
 if [ $? != 0 ]; then
-	echo -e '\033[31m Failed to fetch gfwlist.txt. Please check your Internet connection.\033[0m'
+	printf '\033[31mFailed to fetch gfwlist.txt. Please check your Internet connection.\033[m\n'
 	exit 2
 fi
-base64 -d $BASE64_FILE > $GFWLIST_FILE
-echo -e ' Done.\n'
+base64 --decode $BASE64_FILE > $GFWLIST_FILE
+printf ' Done.\n\n'
 
 # Convert
 IGNORE_PATTERN='^\!|\[|^@@|(https?://){0,1}[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+'
@@ -130,55 +145,52 @@ DOMAIN_PATTERN='([a-zA-Z0-9][-a-zA-Z0-9]*(\.[a-zA-Z0-9][-a-zA-Z0-9]*)+)'
 HANDLE_WILDCARD_PATTERN='s#^(([a-zA-Z0-9]*\*[-a-zA-Z0-9]*)?(\.))?([a-zA-Z0-9][-a-zA-Z0-9]*(\.[a-zA-Z0-9][-a-zA-Z0-9]*)+)(\*)?#\4#g'
 
 echo 'Converting GfwList to dnsmasq rules...'
-echo -e '\033[33m\nWARNING:\nThe following lines in GfwList contain regex, and might be ignored.\n \033[0m'
+printf '\033[33m\nWARNING:\nThe following lines in GfwList contain regex, and might be ignored:\033[m\n\n'
 cat $GFWLIST_FILE | grep -n '^/.*$'
-echo -e "\033[33m\nThis script will try to convert some of the regex rules. But you should know this may not be a equivalent conversion.\nIf there's regex rules which this script do not deal with, you should add the domain manually to the list.\n\033[0m"
-grep -vE $IGNORE_PATTERN $GFWLIST_FILE | sed -r $HEAD_FILTER_PATTERN | sed -r $TAIL_FILTER_PATTERN | grep -E $DOMAIN_PATTERN | sed -r $HANDLE_WILDCARD_PATTERN > $DOMAIN_FILE
+printf "\033[33m\nThis script will try to convert some of the regex rules. But you should know this may not be a equivalent conversion.\nIf there's regex rules which this script do not deal with, you should add the domain manually to the list.\033[m\n\n"
+grep -vE $IGNORE_PATTERN $GFWLIST_FILE | $SED_ERES $HEAD_FILTER_PATTERN | $SED_ERES $TAIL_FILTER_PATTERN | grep -E $DOMAIN_PATTERN | $SED_ERES $HANDLE_WILDCARD_PATTERN > $DOMAIN_FILE
 
 # Add Google search domains
-echo -e 'Fetching Google search domain list...\c'
+printf 'Fetching Google search domain list...'
 wget -q -O$GOOGLE_DOMAIN_FILE https://www.google.com/supported_domains
 if [ $? != 0 ]; then
-	echo -e '\033[31mFailed. Please check your Internet connection.\033[0m'
+	printf '\033[31mFailed. Please check your Internet connection.\033[m\n'
 	exit 2
 fi
-echo -e ' Done\n'
+printf ' Done\n\n'
 sed 's#^\.##g' $GOOGLE_DOMAIN_FILE >> $DOMAIN_FILE
 echo 'Google search domains... Added.'
 
 # Add blogspot domains
-echo -e 'blogspot.com\nblogspot.hk\nblogspot.jp\nblogspot.tw\nblogspot.kr\nblogspot.sg\nblogspot.fr\nblogspot.co.uk\nblogspot.cat' >> $DOMAIN_FILE
+printf 'blogspot.com\nblogspot.hk\nblogspot.jp\nblogspot.tw\nblogspot.kr\nblogspot.sg\nblogspot.fr\nblogspot.co.uk\nblogspot.cat' >> $DOMAIN_FILE
 echo 'Blogspot domains... Added.'
 
 # Add twimg.edgesuit.net
 echo 'twimg.edgesuit.net' >> $DOMAIN_FILE
 echo 'twimg.edgesuit.net... Added.'
 
-# Delete duplicated domains:
-sort -u $DOMAIN_FILE > $UNIQ_DOMAIN_FILE
-
 # Convert domains into dnsmasq rules
 if [ $WITH_IPSET == 1 ]; then
 	echo 'Ipset rules included.'
-	sed -ir.bak 's#.*#server=/\0/'$DNS_IP'\#'$DNS_PORT'\nipset=/\0/'$IPSET_NAME'#g' $UNIQ_DOMAIN_FILE
+	sort -u $DOMAIN_FILE | $SED_ERES 's#(.*)#server=/\1/'$DNS_IP'\#'$DNS_PORT'\nipset=/\1/'$IPSET_NAME'#g' > $UNIQ_DOMAIN_FILE
 else
 	echo 'Ipset rules not included.'
-	sed -ir.bak 's#.*#server=/\0/'$DNS_IP'\#'$DNS_PORT'#g' $UNIQ_DOMAIN_FILE
+	sort -u $DOMAIN_FILE | $SED_ERES 's#(.*)#server=/\1/'$DNS_IP'\#'$DNS_PORT'#g' > $UNIQ_DOMAIN_FILE
 fi
-echo -e '\nConverting GfwList to dnsmasq rules... Done.\n'
+printf '\nConverting GfwList to dnsmasq rules... Done.\n\n'
 
 # Generate output file
-echo -e 'Generating dnsmasq configuration file...\c'
+printf 'Generating dnsmasq configuration file...'
 echo '# GfwList ipset rules for dnsmasq' > $OUT_FILE
 LOGTIME=$(date "+%Y-%m-%d %H:%M:%S")
 echo "# Last Updated on $LOGTIME" >> $OUT_FILE
 echo '# ' >> $OUT_FILE
 cat $UNIQ_DOMAIN_FILE >> $OUT_FILE
-echo -e ' Done.\n'
+printf ' Done.\n\n'
 
 # Clean up temp files
-echo -e 'Cleaning up...\c'
+printf 'Cleaning up...'
 rm -rf $TMP_DIR
-echo -e ' Done.\n'
+printf ' Done.\n\n'
 
 echo 'Finished!'

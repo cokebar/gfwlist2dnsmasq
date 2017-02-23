@@ -5,7 +5,7 @@ __Note: This script now lacks testing. Use carefully. Please send issues to help
 
 ### Usage
 ```
-    Usage: gfwlist2dnsmasq.sh [options] -f FILE
+    Usage: sh gfwlist2dnsmasq.sh [options] -f FILE
     Valid options are:
         -d <dns_ip>        DNS IP address for the GfwList Domains (Default: 127.0.0.1)
         -p <dns_port>      DNS Port for the GfwList Domains (Default: 5300)
