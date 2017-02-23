@@ -103,7 +103,7 @@ fi
 
 # Set Global Var
 BASE_URL='https://github.com/gfwlist/gfwlist/raw/master/gfwlist.txt'
-RND=`cat /dev/urandom | head -n 10 | md5sum | head -c 6`
+RND=`od -x /dev/urandom | head -n 1 | awk '{print $2}'`
 TMP_DIR="/tmp/gfwlist2dnsmasq.$RND"
 BASE64_FILE="$TMP_DIR/base64.txt"
 GFWLIST_FILE="$TMP_DIR/gfwlist.txt"
