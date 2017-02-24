@@ -11,7 +11,7 @@ __Note: This script now lacks testing. Use carefully. Please send issues to help
         -p <dns_port>      DNS Port for the GfwList Domains (Default: 5300)
         -s <ipset_name>    ipset name for the GfwList domains (If not given, ipset rules will not be generated.)
         -f <FILE>          /path/to/output_filename
-		-b                 Force bypass certificate validation (insecure)
+        -B                 Force bypass certificate validation (insecure)
         -h                 Usage
 ```
 
