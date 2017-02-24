@@ -202,4 +202,6 @@ echo '# ' >> $OUT_FILE
 cat $UNIQ_DOMAIN_FILE >> $OUT_FILE
 printf ' Done.\n\n'
 
+clean_and_exit 0
+
 echo 'Finished!'
