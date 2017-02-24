@@ -13,8 +13,9 @@ usage() {
     Valid options are:
         -d <dns_ip>        DNS IP address for the GfwList Domains (Default: 127.0.0.1)
         -p <dns_port>      DNS Port for the GfwList Domains (Default: 5300)
-        -s <ipset_name>    ipset name for the GfwList domains (If not given, ipset rules will not be generated.)
+        -s <ipset_name>    Ipset name for the GfwList domains (If not given, ipset rules will not be generated.)
         -f <FILE>          /path/to/output_filename
+		-b                 Force bypass certificate validation (insecure)
         -h                 Usage
 EOF
         exit $1
@@ -24,6 +25,7 @@ DNS_IP=''
 DNS_PORT=''
 IPSET_NAME=''
 FILE_FULLPATH=''
+CURL_EXTARG=''
 
 while getopts "d:p:s:f:h" arg; do
 	case "$arg" in
@@ -39,6 +41,9 @@ while getopts "d:p:s:f:h" arg; do
 		s)
 			IPSET_NAME=$OPTARG
 			;;
+		b)
+			CURL_EXTARG='--insecure'
+			;;			
 		h)
 			usage 0
 			;;
@@ -51,9 +56,9 @@ done
 
 ############################## Check Dependency #############################
 
-which od sed awk base64 wget >/dev/null
+which sed awk base64 curl >/dev/null
 if [ $? != 0 ]; then
-	printf '\033[31mError: Missing Dependency.\nPlease check whether you have the following binaries on you system:\nod, sed, awk, base64, wget\033[m\n'
+	printf '\033[31mError: Missing Dependency.\nPlease check whether you have the following binaries on you system:\n, sed, awk, base64, curl\033[m\n'
 	exit 3
 fi
 
@@ -129,12 +134,12 @@ UNIQ_DOMAIN_FILE="$TMP_DIR/gfwlist2uniq_domain.tmp"
 # Fetch GfwList and decode it into plain text
 printf 'Fetching GfwList...'
 mkdir $TMP_DIR
-wget -q -O$BASE64_FILE $BASE_URL
+curl -s -L $CURL_EXTARG -o$BASE64_FILE $BASE_URL
 if [ $? != 0 ]; then
 	printf '\033[31mFailed to fetch gfwlist.txt. Please check your Internet connection.\033[m\n'
 	exit 2
 fi
-base64 --decode $BASE64_FILE > $GFWLIST_FILE
+base64 --decode $BASE64_FILE > $GFWLIST_FILE || ( printf '\033[31mFailed to decode gfwlist.txt. Quit.\033[m\n'; exit 2 )
 printf ' Done.\n\n'
 
 # Convert
@@ -152,7 +157,7 @@ grep -vE $IGNORE_PATTERN $GFWLIST_FILE | $SED_ERES $HEAD_FILTER_PATTERN | $SED_E
 
 # Add Google search domains
 printf 'Fetching Google search domain list...'
-wget -q -O$GOOGLE_DOMAIN_FILE https://www.google.com/supported_domains
+curl -s -L $CURL_EXTARG -o$GOOGLE_DOMAIN_FILE https://www.google.com/supported_domains
 if [ $? != 0 ]; then
 	printf '\033[31mFailed. Please check your Internet connection.\033[m\n'
 	exit 2
