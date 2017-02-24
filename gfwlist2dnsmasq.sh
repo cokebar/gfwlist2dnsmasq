@@ -15,10 +15,18 @@ usage() {
         -p <dns_port>      DNS Port for the GfwList Domains (Default: 5300)
         -s <ipset_name>    Ipset name for the GfwList domains (If not given, ipset rules will not be generated.)
         -f <FILE>          /path/to/output_filename
-		-b                 Force bypass certificate validation (insecure)
+        -B                 Force bypass certificate validation (insecure)
         -h                 Usage
 EOF
         exit $1
+}
+
+clean_and_exit(){
+	# Clean up temp files
+	printf 'Cleaning up...'
+	rm -rf $TMP_DIR
+	printf ' Done.\n\n'
+	exit $1
 }
 
 DNS_IP=''
@@ -27,7 +35,7 @@ IPSET_NAME=''
 FILE_FULLPATH=''
 CURL_EXTARG=''
 
-while getopts "d:p:s:f:h" arg; do
+while getopts "Bd:p:s:f:h" arg; do
 	case "$arg" in
 		d)
 			DNS_IP=$OPTARG
@@ -41,7 +49,8 @@ while getopts "d:p:s:f:h" arg; do
 		s)
 			IPSET_NAME=$OPTARG
 			;;
-		b)
+		B)
+			echo 'Bypassed certificate validation.'
 			CURL_EXTARG='--insecure'
 			;;			
 		h)
@@ -137,9 +146,9 @@ mkdir $TMP_DIR
 curl -s -L $CURL_EXTARG -o$BASE64_FILE $BASE_URL
 if [ $? != 0 ]; then
 	printf '\033[31mFailed to fetch gfwlist.txt. Please check your Internet connection.\033[m\n'
-	exit 2
+	clean_and_exit 2
 fi
-base64 --decode $BASE64_FILE > $GFWLIST_FILE || ( printf '\033[31mFailed to decode gfwlist.txt. Quit.\033[m\n'; exit 2 )
+base64 --decode $BASE64_FILE > $GFWLIST_FILE || ( printf '\033[31mFailed to decode gfwlist.txt. Quit.\033[m\n'; clean_and_exit 2 )
 printf ' Done.\n\n'
 
 # Convert
@@ -160,7 +169,7 @@ printf 'Fetching Google search domain list...'
 curl -s -L $CURL_EXTARG -o$GOOGLE_DOMAIN_FILE https://www.google.com/supported_domains
 if [ $? != 0 ]; then
 	printf '\033[31mFailed. Please check your Internet connection.\033[m\n'
-	exit 2
+	clean_and_exit 2
 fi
 printf ' Done\n\n'
 sed 's#^\.##g' $GOOGLE_DOMAIN_FILE >> $DOMAIN_FILE
@@ -191,11 +200,6 @@ LOGTIME=$(date "+%Y-%m-%d %H:%M:%S")
 echo "# Last Updated on $LOGTIME" >> $OUT_FILE
 echo '# ' >> $OUT_FILE
 cat $UNIQ_DOMAIN_FILE >> $OUT_FILE
-printf ' Done.\n\n'
-
-# Clean up temp files
-printf 'Cleaning up...'
-rm -rf $TMP_DIR
 printf ' Done.\n\n'
 
 echo 'Finished!'
