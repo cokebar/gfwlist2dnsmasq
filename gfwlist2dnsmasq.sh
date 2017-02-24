@@ -123,7 +123,7 @@ fi
 
 # Set Global Var
 BASE_URL='https://github.com/gfwlist/gfwlist/raw/master/gfwlist.txt'
-RND=`head /dev/urandom | tr -dc "0123456789" | head -c6`
+RND=`awk 'BEGIN{srand();print int(rand()*10000)}'`
 TMP_DIR="/tmp/gfwlist2dnsmasq.$RND"
 BASE64_FILE="$TMP_DIR/base64.txt"
 GFWLIST_FILE="$TMP_DIR/gfwlist.txt"
