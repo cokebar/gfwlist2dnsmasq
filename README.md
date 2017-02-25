@@ -31,4 +31,4 @@ opkg update
 opkg install ca-certificates curl
 ```
 
-If you have problem installing ca-certificates, or if you really want to bypass the certificate validation, use "-b" option. You should know this is insecure.
+If you have problem installing ca-certificates, or if you really want to bypass the certificate validation, use "-B" option. You should know this is insecure.
