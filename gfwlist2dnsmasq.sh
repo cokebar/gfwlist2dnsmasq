@@ -2,21 +2,27 @@
 
 # Name:        gfwlist2dnsmasq.sh
 # Desription:  A shell script which convert gfwlist into dnsmasq rules.
-# Version:     0.4 (2017.02.23)
+# Version:     0.5 (2017.03.07)
 # Author:      Cokebar Chi
 # Website:     https://github.com/cokebar
 
 usage() {
         cat <<-EOF
 
-    Usage: sh gfwlist2dnsmasq.sh [options] -f FILE
-    Valid options are:
-        -d <dns_ip>        DNS IP address for the GfwList Domains (Default: 127.0.0.1)
-        -p <dns_port>      DNS Port for the GfwList Domains (Default: 5300)
-        -s <ipset_name>    Ipset name for the GfwList domains (If not given, ipset rules will not be generated.)
-        -f <FILE>          /path/to/output_filename
-        -B                 Force bypass certificate validation (insecure)
-        -h                 Usage
+Usage: sh gfwlist2dnsmasq.sh [options] -o FILE
+Valid options are:
+    -d, --dns <dns_ip>
+                DNS IP address for the GfwList Domains (Default: 127.0.0.1)
+    -p, --port <dns_port>
+                DNS Port for the GfwList Domains (Default: 5300)
+    -s, --ipset <ipset_name>
+                Ipset name for the GfwList domains
+                (If not given, ipset rules will not be generated.)
+    -o, --output <FILE>
+                /path/to/output_filename
+    -i, --insecure
+                Force bypass certificate validation (insecure)
+    -h, --help  Usage
 EOF
         exit $1
 }
@@ -35,32 +41,36 @@ IPSET_NAME=''
 FILE_FULLPATH=''
 CURL_EXTARG=''
 
-while getopts "Bd:p:s:f:h" arg; do
-	case "$arg" in
-		d)
-			DNS_IP=$OPTARG
-			;;
-		f)
-			OUT_FILE=$OPTARG
-			;;
-		p)
-			DNS_PORT=$OPTARG
-			;;
-		s)
-			IPSET_NAME=$OPTARG
-			;;
-		B)
-			echo 'Bypassed certificate validation.'
-			CURL_EXTARG='--insecure'
-			;;			
-		h)
+while [ ${#} -gt 0 ]; do
+	case "${1}" in
+		--help | -h)
 			usage 0
 			;;
+		--insecure | -i)
+			CURL_EXTARG='--insecure'
+			;;
+		--dns | -d)
+			DNS_IP="$2"
+			shift
+			;;
+		--port | -p)
+			DNS_PORT="$2"
+			shift
+			;;
+		--ipset | -s)
+			IPSET_NAME="$2"
+			shift
+			;;
+		--output | -o)
+			OUT_FILE="$2"
+			shift
+			;;
 		*)
-			echo "Invalid argument: -$OPTARG"
-			exit 1
+			echo "Invalid argument: $1"
+			usage 1
 			;;
 	esac
+	shift 1
 done
 
 ############################## Check Dependency #############################
@@ -82,14 +92,14 @@ fi
 
 # Check path & file name
 if [ -z $OUT_FILE ]; then
-	echo 'Please enter full path to the file.( Use: -f /path/to/output_filename)'
+	echo 'Please enter full path to the file.(/path/to/output_filename)'
 	exit 1
 else
 	if [ -z ${OUT_FILE##*/} ]; then
 		echo 'Please enter full path to the file, include file name.'
 		exit 1
 	else
-		if [ ! -d ${OUT_FILE%/*} ]; then
+		if [ ${OUT_FILE}a != ${OUT_FILE%/*}a ] && [ ! -d ${OUT_FILE%/*} ]; then
 			echo "Folder do not exist: ${OUT_FILE%/*}"
 			exit 1
 		fi
@@ -138,7 +148,8 @@ BASE64_FILE="$TMP_DIR/base64.txt"
 GFWLIST_FILE="$TMP_DIR/gfwlist.txt"
 DOMAIN_FILE="$TMP_DIR/gfwlist2domain.tmp"
 GOOGLE_DOMAIN_FILE="$TMP_DIR/google_domain.txt"
-UNIQ_DOMAIN_FILE="$TMP_DIR/gfwlist2uniq_domain.tmp"
+CONF_TMP_FILE="$TMP_DIR/gfwlist.conf.tmp"
+OUT_TMP_FILE="$TMP_DIR/gfwlist.out.tmp"
 
 # Fetch GfwList and decode it into plain text
 printf 'Fetching GfwList...'
@@ -168,7 +179,7 @@ grep -vE $IGNORE_PATTERN $GFWLIST_FILE | $SED_ERES $HEAD_FILTER_PATTERN | $SED_E
 printf 'Fetching Google search domain list...'
 curl -s -L $CURL_EXTARG -o$GOOGLE_DOMAIN_FILE https://www.google.com/supported_domains
 if [ $? != 0 ]; then
-	printf '\033[31mFailed. Please check your Internet connection.\033[m\n'
+	printf '\n\033[31mFailed. Please check your Internet connection. You may need a proxy/VPN.\033[m\n'
 	clean_and_exit 2
 fi
 printf ' Done\n\n'
@@ -186,22 +197,22 @@ echo 'twimg.edgesuit.net... Added.'
 # Convert domains into dnsmasq rules
 if [ $WITH_IPSET == 1 ]; then
 	echo 'Ipset rules included.'
-	sort -u $DOMAIN_FILE | $SED_ERES 's#(.*)#server=/\1/'$DNS_IP'\#'$DNS_PORT'\nipset=/\1/'$IPSET_NAME'#g' > $UNIQ_DOMAIN_FILE
+	sort -u $DOMAIN_FILE | $SED_ERES 's#(.*)#server=/\1/'$DNS_IP'\#'$DNS_PORT'\
+ipset=/\1/'$IPSET_NAME'#g' > $CONF_TMP_FILE
 else
 	echo 'Ipset rules not included.'
-	sort -u $DOMAIN_FILE | $SED_ERES 's#(.*)#server=/\1/'$DNS_IP'\#'$DNS_PORT'#g' > $UNIQ_DOMAIN_FILE
+	sort -u $DOMAIN_FILE | $SED_ERES 's#(.*)#server=/\1/'$DNS_IP'\#'$DNS_PORT'#g' > $CONF_TMP_FILE
 fi
-printf '\nConverting GfwList to dnsmasq rules... Done.\n\n'
 
 # Generate output file
-printf 'Generating dnsmasq configuration file...'
-echo '# GfwList ipset rules for dnsmasq' > $OUT_FILE
+echo '# GfwList ipset rules for dnsmasq' > $OUT_TMP_FILE
 LOGTIME=$(date "+%Y-%m-%d %H:%M:%S")
-echo "# Last Updated on $LOGTIME" >> $OUT_FILE
-echo '# ' >> $OUT_FILE
-cat $UNIQ_DOMAIN_FILE >> $OUT_FILE
-printf ' Done.\n\n'
+echo "# Last Updated on $LOGTIME" >> $OUT_TMP_FILE
+echo '# ' >> $OUT_TMP_FILE
+cat $CONF_TMP_FILE >> $OUT_TMP_FILE
+cp $OUT_TMP_FILE $OUT_FILE
+printf '\nConverting GfwList to dnsmasq rules... Done.\n\n'
 
+# Clean up
 clean_and_exit 0
-
 echo 'Finished!'
