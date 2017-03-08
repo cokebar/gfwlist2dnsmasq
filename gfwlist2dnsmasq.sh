@@ -75,9 +75,9 @@ done
 
 ############################## Check Dependency #############################
 
-which sed awk base64 curl >/dev/null
+which sed base64 curl >/dev/null
 if [ $? != 0 ]; then
-	printf '\033[31mError: Missing Dependency.\nPlease check whether you have the following binaries on you system:\n, sed, awk, base64, curl\033[m\n'
+	printf '\033[31mError: Missing Dependency.\nPlease check whether you have the following binaries on you system:\nsed, base64, curl\033[m\n'
 	exit 3
 fi
 
@@ -142,8 +142,7 @@ fi
 
 # Set Global Var
 BASE_URL='https://github.com/gfwlist/gfwlist/raw/master/gfwlist.txt'
-RND=`awk 'BEGIN{srand();print int(rand()*10000)}'`
-TMP_DIR="/tmp/gfwlist2dnsmasq.$RND"
+TMP_DIR="/tmp/gfwlist2dnsmasq.$(date "+%Y%m%d-%H%M%S")"
 BASE64_FILE="$TMP_DIR/base64.txt"
 GFWLIST_FILE="$TMP_DIR/gfwlist.txt"
 DOMAIN_FILE="$TMP_DIR/gfwlist2domain.tmp"
@@ -153,7 +152,7 @@ OUT_TMP_FILE="$TMP_DIR/gfwlist.out.tmp"
 
 # Fetch GfwList and decode it into plain text
 printf 'Fetching GfwList...'
-mkdir $TMP_DIR
+mkdir -p $TMP_DIR
 curl -s -L $CURL_EXTARG -o$BASE64_FILE $BASE_URL
 if [ $? != 0 ]; then
 	printf '\033[31mFailed to fetch gfwlist.txt. Please check your Internet connection.\033[m\n'
@@ -206,8 +205,7 @@ fi
 
 # Generate output file
 echo '# GfwList ipset rules for dnsmasq' > $OUT_TMP_FILE
-LOGTIME=$(date "+%Y-%m-%d %H:%M:%S")
-echo "# Last Updated on $LOGTIME" >> $OUT_TMP_FILE
+echo "# Last Updated on $(date "+%Y-%m-%d %H:%M:%S")" >> $OUT_TMP_FILE
 echo '# ' >> $OUT_TMP_FILE
 cat $CONF_TMP_FILE >> $OUT_TMP_FILE
 cp $OUT_TMP_FILE $OUT_FILE
