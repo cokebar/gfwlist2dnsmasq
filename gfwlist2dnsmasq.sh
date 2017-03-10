@@ -142,7 +142,7 @@ fi
 
 # Set Global Var
 BASE_URL='https://github.com/gfwlist/gfwlist/raw/master/gfwlist.txt'
-TMP_DIR="/tmp/gfwlist2dnsmasq.$(date "+%Y%m%d-%H%M%S")"
+TMP_DIR=`mktemp -d /tmp/gfwlist2dnsmasq.XXXXXX`
 BASE64_FILE="$TMP_DIR/base64.txt"
 GFWLIST_FILE="$TMP_DIR/gfwlist.txt"
 DOMAIN_FILE="$TMP_DIR/gfwlist2domain.tmp"
@@ -152,7 +152,6 @@ OUT_TMP_FILE="$TMP_DIR/gfwlist.out.tmp"
 
 # Fetch GfwList and decode it into plain text
 printf 'Fetching GfwList...'
-mkdir -p $TMP_DIR
 curl -s -L $CURL_EXTARG -o$BASE64_FILE $BASE_URL
 if [ $? != 0 ]; then
 	printf '\033[31mFailed to fetch gfwlist.txt. Please check your Internet connection.\033[m\n'
