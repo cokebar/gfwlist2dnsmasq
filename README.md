@@ -30,9 +30,13 @@ For security reason, this script won't bypass the certificate validation. So you
 You can follow this to install them:
 
 ```
-mkdir -p /etc/ssl/certs
-export SSL_CERT_DIR=/etc/ssl/certs
-source /etc/profile
+opkg update
+opkg install ca-certificates curl
+```
+
+For LEDE users, you should install ca-bundle in addition:
+
+```
 opkg update
 opkg install ca-certificates curl
 ```
