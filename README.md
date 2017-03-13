@@ -38,7 +38,7 @@ For LEDE users, you should install ca-bundle in addition:
 
 ```
 opkg update
-opkg install ca-certificates curl
+opkg install ca-certificates ca-bundle curl
 ```
 
 If you have problem installing ca-certificates, or if you really want to bypass the certificate validation, use '-i' or '--insecure' option. You should know this is insecure.
