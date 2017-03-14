@@ -1,6 +1,10 @@
 # gfwlist2dnsmasq
 A shell script which convert gfwlist into dnsmasq rules.
 
+Working on both Linux-based (Debian/Ubuntu/Cent OS/OpenWrt/LEDE/Cygwin/Bash on Windows/etc.) and BSD-based (FreeBSD/Mac OS X/etc.) system.
+
+This script needs `sed`, `base64` and `curl`. You should have these binaries on you system.
+
 __Note: This script now lacks testing. Use carefully. Please send issues to help me debug.__
 
 ### Usage
@@ -23,22 +27,15 @@ Valid options are:
 
 ### OpenWRT / LEDE Usage
 
-Before using this script, you should install curl first.
-
-For security reason, this script won't bypass the certificate validation. So you should install ca-certificates as well.
-
-You can follow this to install them:
+For OpenWrt/LEDE system, `base64` and `curl` may not be included into the system by default. For security reason, this script won't bypass the certificate validation. So you should install ca-certificates as well. For LEDE users, you should install ca-bundle in addition:
 
 ```
+# OpenWrt
 opkg update
-opkg install ca-certificates curl
-```
-
-For LEDE users, you should install ca-bundle in addition:
-
-```
+opkg install coreutils-base64 curl ca-certificates
+# LEDE
 opkg update
-opkg install ca-certificates ca-bundle curl
+opkg install coreutils-base64 curl ca-certificates ca-bundle
 ```
 
-If you have problem installing ca-certificates, or if you really want to bypass the certificate validation, use '-i' or '--insecure' option. You should know this is insecure.
+If you really want to bypass the certificate validation, use '-i' or '--insecure' option. You should know this is insecure.
