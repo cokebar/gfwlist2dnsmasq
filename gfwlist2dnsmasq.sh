@@ -2,7 +2,7 @@
 
 # Name:        gfwlist2dnsmasq.sh
 # Desription:  A shell script which convert gfwlist into dnsmasq rules.
-# Version:     0.5 (2017.03.07)
+# Version:     0.5.1 (2017.03.14)
 # Author:      Cokebar Chi
 # Website:     https://github.com/cokebar
 
@@ -43,7 +43,7 @@ check_depends(){
 	fi
 
 	SYS_KERNEL=`uname -s`
-	if [ $SYS_KERNEL == "Darwin"  -o $SYS_KERNEL == "FreeBSD" ]; then
+	if [ $SYS_KERNEL = "Darwin"  -o $SYS_KERNEL = "FreeBSD" ]; then
 		SED_ERES='sed -E'
 	else
 		SED_ERES='sed -r'
@@ -51,8 +51,8 @@ check_depends(){
 }
 
 get_args(){
-	DNS_IP=''
-	DNS_PORT=''
+	DNS_IP='127.0.0.1'
+	DNS_PORT='5353'
 	IPSET_NAME=''
 	FILE_FULLPATH=''
 	CURL_EXTARG=''
@@ -107,20 +107,14 @@ get_args(){
 	fi
 
 	# Check DNS IP
-	if [ -z $DNS_IP ]; then
-		DNS_IP=127.0.0.1
-	else
-		IP_TEST=$(echo $DNS_IP | grep -E '^((2[0-4][0-9]|25[0-5]|[01]?[0-9][0-9]?)\.){3}(2[0-4][0-9]|25[0-5]|[01]?[0-9][0-9]?)$')
-		if [ "$IP_TEST" != "$DNS_IP" ]; then
-			echo 'Please enter a valid DNS server IP address.'
-			exit 1
-		fi
+	IP_TEST=$(echo $DNS_IP | grep -E '^((2[0-4][0-9]|25[0-5]|[01]?[0-9][0-9]?)\.){3}(2[0-4][0-9]|25[0-5]|[01]?[0-9][0-9]?)$')
+	if [ "$IP_TEST" != "$DNS_IP" ]; then
+		echo 'Please enter a valid DNS server IP address.'
+		exit 1
 	fi
 
 	# Check DNS port
-	if [ -z $DNS_PORT ]; then
-		DNS_PORT=5300
-	elif [ $DNS_PORT -lt 1 -o $DNS_PORT -gt 65535 ]; then
+	if [ $DNS_PORT -lt 1 -o $DNS_PORT -gt 65535 ]; then
 		echo 'Please enter a valid DNS server port.'
 		exit 1
 	fi
@@ -193,7 +187,7 @@ process(){
 	echo 'twimg.edgesuit.net... Added.'
 
 	# Convert domains into dnsmasq rules
-	if [ $WITH_IPSET == 1 ]; then
+	if [ $WITH_IPSET -eq 1 ]; then
 		echo 'Ipset rules included.'
 		sort -u $DOMAIN_FILE | $SED_ERES 's#(.*)#server=/\1/'$DNS_IP'\#'$DNS_PORT'\
 ipset=/\1/'$IPSET_NAME'#g' > $CONF_TMP_FILE
