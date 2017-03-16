@@ -22,6 +22,9 @@ Valid options are:
                 /path/to/output_filename
     -i, --insecure
                 Force bypass certificate validation (insecure)
+    -l, --domain-list
+                Convert Gfwlist into domain list instead of dnsmasq rules
+                (If this option is set, DNS IP/Port & ipset are not needed)
     -h, --help  Usage
 ```
 

@@ -2,7 +2,7 @@
 
 # Name:        gfwlist2dnsmasq.sh
 # Desription:  A shell script which convert gfwlist into dnsmasq rules.
-# Version:     0.5.1 (2017.03.14)
+# Version:     0.6 (2017.03.14)
 # Author:      Cokebar Chi
 # Website:     https://github.com/cokebar
 
@@ -22,6 +22,9 @@ Valid options are:
                 /path/to/output_filename
     -i, --insecure
                 Force bypass certificate validation (insecure)
+    -l, --domain-list
+                Convert Gfwlist into domain list instead of dnsmasq rules
+                (If this option is set, DNS IP/Port & ipset are not needed)
     -h, --help  Usage
 EOF
         exit $1
@@ -32,6 +35,7 @@ clean_and_exit(){
 	printf 'Cleaning up...'
 	rm -rf $TMP_DIR
 	printf ' Done.\n\n'
+	[ $1 -eq 0 ] && printf '\033[32mJob Finished.\033[m\n' || printf '\033[31mExit with Error code '$1'.\033[m\n'
 	exit $1
 }
 
@@ -51,6 +55,7 @@ check_depends(){
 }
 
 get_args(){
+	OUT_TYPE='DNSMASQ_RULES'
 	DNS_IP='127.0.0.1'
 	DNS_PORT='5353'
 	IPSET_NAME=''
@@ -62,6 +67,9 @@ get_args(){
 		case "${1}" in
 			--help | -h)
 				usage 0
+				;;
+			--domain-list | -l)
+				OUT_TYPE='DOMAIN_LIST'
 				;;
 			--insecure | -i)
 				CURL_EXTARG='--insecure'
@@ -92,43 +100,45 @@ get_args(){
 
 	# Check path & file name
 	if [ -z $OUT_FILE ]; then
-		echo 'Please enter full path to the file.(/path/to/output_filename)'
+		printf '\033[31mError: Please specify the path to the output file(using -o/--output argument).\033[m\n'
 		exit 1
 	else
 		if [ -z ${OUT_FILE##*/} ]; then
-			echo 'Please enter full path to the file, include file name.'
+			printf '\033[31mError: '$OUT_FILE' is a path, not a file.\033[m\n'
 			exit 1
 		else
 			if [ ${OUT_FILE}a != ${OUT_FILE%/*}a ] && [ ! -d ${OUT_FILE%/*} ]; then
-				echo "Folder do not exist: ${OUT_FILE%/*}"
+				printf '\033[31mError: Folder do not exist: '${OUT_FILE%/*}'\033[m\n'
 				exit 1
 			fi
 		fi
 	fi
-
-	# Check DNS IP
-	IP_TEST=$(echo $DNS_IP | grep -E '^((2[0-4][0-9]|25[0-5]|[01]?[0-9][0-9]?)\.){3}(2[0-4][0-9]|25[0-5]|[01]?[0-9][0-9]?)$')
-	if [ "$IP_TEST" != "$DNS_IP" ]; then
-		echo 'Please enter a valid DNS server IP address.'
-		exit 1
-	fi
-
-	# Check DNS port
-	if [ $DNS_PORT -lt 1 -o $DNS_PORT -gt 65535 ]; then
-		echo 'Please enter a valid DNS server port.'
-		exit 1
-	fi
-
-	# Check ipset name
-	if [ -z $IPSET_NAME ]; then
-		WITH_IPSET=0
-	else
-		IPSET_TEST=$(echo $IPSET_NAME | grep -E '^\w+$')
-		if [ "$IPSET_TEST" != "$IPSET_NAME" ]; then
-			echo 'Please enter a valid IP set name.'
+	
+	if [ $OUT_TYPE = 'DNSMASQ_RULES' ]; then
+		# Check DNS IP
+		IP_TEST=$(echo $DNS_IP | grep -E '^((2[0-4][0-9]|25[0-5]|[01]?[0-9][0-9]?)\.){3}(2[0-4][0-9]|25[0-5]|[01]?[0-9][0-9]?)$')
+		if [ "$IP_TEST" != "$DNS_IP" ]; then
+			printf '\033[31mError: Please enter a valid DNS server IP address.\033[m\n'
 			exit 1
+		fi
+
+		# Check DNS port
+		if [ $DNS_PORT -lt 1 -o $DNS_PORT -gt 65535 ]; then
+			printf '\033[31mError: Please enter a valid DNS server port.\033[m\n'
+			exit 1
+		fi
+
+		# Check ipset name
+		if [ -z $IPSET_NAME ]; then
+			WITH_IPSET=0
 		else
-			WITH_IPSET=1
+			IPSET_TEST=$(echo $IPSET_NAME | grep -E '^\w+$')
+			if [ "$IPSET_TEST" != "$IPSET_NAME" ]; then
+				printf '\033[31mError: Please enter a valid IP set name.\033[m\n'
+				exit 1
+			else
+				WITH_IPSET=1
+			fi
 		fi
 	fi
 }
@@ -145,10 +155,11 @@ process(){
 	OUT_TMP_FILE="$TMP_DIR/gfwlist.out.tmp"
 
 	# Fetch GfwList and decode it into plain text
+	printf '\033[32mJob Started.\n\033[m\n'
 	printf 'Fetching GfwList...'
 	curl -s -L $CURL_EXTARG -o$BASE64_FILE $BASE_URL
 	if [ $? != 0 ]; then
-		printf '\033[31mFailed to fetch gfwlist.txt. Please check your Internet connection.\033[m\n'
+		printf '\033[31m\nFailed to fetch gfwlist.txt. Please check your Internet connection.\033[m\n'
 		clean_and_exit 2
 	fi
 	base64 --decode $BASE64_FILE > $GFWLIST_FILE || ( printf '\033[31mFailed to decode gfwlist.txt. Quit.\033[m\n'; clean_and_exit 2 )
@@ -161,7 +172,7 @@ process(){
 	DOMAIN_PATTERN='([a-zA-Z0-9][-a-zA-Z0-9]*(\.[a-zA-Z0-9][-a-zA-Z0-9]*)+)'
 	HANDLE_WILDCARD_PATTERN='s#^(([a-zA-Z0-9]*\*[-a-zA-Z0-9]*)?(\.))?([a-zA-Z0-9][-a-zA-Z0-9]*(\.[a-zA-Z0-9][-a-zA-Z0-9]*)+)(\*)?#\4#g'
 
-	echo 'Converting GfwList to dnsmasq rules...'
+	echo 'Converting GfwList to '$OUT_TYPE'...'
 	printf '\033[33m\nWARNING:\nThe following lines in GfwList contain regex, and might be ignored:\033[m\n\n'
 	cat $GFWLIST_FILE | grep -n '^/.*$'
 	printf "\033[33m\nThis script will try to convert some of the regex rules. But you should know this may not be a equivalent conversion.\nIf there's regex rules which this script do not deal with, you should add the domain manually to the list.\033[m\n\n"
@@ -185,28 +196,33 @@ process(){
 	# Add twimg.edgesuit.net
 	echo 'twimg.edgesuit.net' >> $DOMAIN_FILE
 	echo 'twimg.edgesuit.net... Added.'
-
+	
+	if [ $OUT_TYPE = 'DNSMASQ_RULES' ]; then
 	# Convert domains into dnsmasq rules
-	if [ $WITH_IPSET -eq 1 ]; then
-		echo 'Ipset rules included.'
-		sort -u $DOMAIN_FILE | $SED_ERES 's#(.*)#server=/\1/'$DNS_IP'\#'$DNS_PORT'\
+		if [ $WITH_IPSET -eq 1 ]; then
+			echo 'Ipset rules included.'
+			sort -u $DOMAIN_FILE | $SED_ERES 's#(.*)#server=/\1/'$DNS_IP'\#'$DNS_PORT'\
 ipset=/\1/'$IPSET_NAME'#g' > $CONF_TMP_FILE
+		else
+			echo 'Ipset rules not included.'
+			sort -u $DOMAIN_FILE | $SED_ERES 's#(.*)#server=/\1/'$DNS_IP'\#'$DNS_PORT'#g' > $CONF_TMP_FILE
+		fi
+
+		# Generate output file
+		echo '# dnsmasq rules generated by gfwlist' > $OUT_TMP_FILE
+		echo "# Last Updated on $(date "+%Y-%m-%d %H:%M:%S")" >> $OUT_TMP_FILE
+		echo '# ' >> $OUT_TMP_FILE
+		cat $CONF_TMP_FILE >> $OUT_TMP_FILE
+		cp $OUT_TMP_FILE $OUT_FILE
 	else
-		echo 'Ipset rules not included.'
-		sort -u $DOMAIN_FILE | $SED_ERES 's#(.*)#server=/\1/'$DNS_IP'\#'$DNS_PORT'#g' > $CONF_TMP_FILE
+		sort -u $DOMAIN_FILE > $OUT_TMP_FILE
 	fi
-
-	# Generate output file
-	echo '# dnsmasq rules generated by gfwlist' > $OUT_TMP_FILE
-	echo "# Last Updated on $(date "+%Y-%m-%d %H:%M:%S")" >> $OUT_TMP_FILE
-	echo '# ' >> $OUT_TMP_FILE
-	cat $CONF_TMP_FILE >> $OUT_TMP_FILE
+	
 	cp $OUT_TMP_FILE $OUT_FILE
-	printf '\nConverting GfwList to dnsmasq rules... Done.\n\n'
-
+	printf '\nConverting GfwList to '$OUT_TYPE'... Done.\n\n'
+	
 	# Clean up
 	clean_and_exit 0
-	echo 'Finished!'
 }
 
 main() {
