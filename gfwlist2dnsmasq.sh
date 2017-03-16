@@ -168,7 +168,7 @@ process(){
 	# Convert
 	IGNORE_PATTERN='^\!|\[|^@@|(https?://){0,1}[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+'
 	HEAD_FILTER_PATTERN='s#^(\|\|)?(https?://)?##g'
-	TAIL_FILTER_PATTERN='s#/.*$##g'
+	TAIL_FILTER_PATTERN='s#/.*$|%2F.*$##g'
 	DOMAIN_PATTERN='([a-zA-Z0-9][-a-zA-Z0-9]*(\.[a-zA-Z0-9][-a-zA-Z0-9]*)+)'
 	HANDLE_WILDCARD_PATTERN='s#^(([a-zA-Z0-9]*\*[-a-zA-Z0-9]*)?(\.))?([a-zA-Z0-9][-a-zA-Z0-9]*(\.[a-zA-Z0-9][-a-zA-Z0-9]*)+)(\*)?#\4#g'
 
