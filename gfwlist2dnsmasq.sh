@@ -25,7 +25,11 @@ Valid options are:
     -l, --domain-list
                 Convert Gfwlist into domain list instead of dnsmasq rules
                 (If this option is set, DNS IP/Port & ipset are not needed)
-    -h, --help  Usage
+        --extra-domain-file
+                Include extra domains from a domain list text file
+                Please put one domain per line
+    -h, --help
+                Usage
 EOF
         exit $1
 }
@@ -91,7 +95,7 @@ get_args(){
 				OUT_FILE="$2"
 				shift
 				;;
-			--extra | -e)
+			--extra-domain-file)
 				EXTRA_DOMAIN_FILE="$2"
 				shift
 				;;
@@ -202,7 +206,6 @@ process(){
 	# Add extra domains
 	if [ ! -z $EXTRA_DOMAIN_FILE ]; then
 	    cat $EXTRA_DOMAIN_FILE >> $DOMAIN_FILE
-	    printf '\n' >> $DOMAIN_FILE
 	fi
 	echo 'Extra domain file '$EXTRA_DOMAIN_FILE'... Added.'
 
