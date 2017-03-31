@@ -25,6 +25,9 @@ Valid options are:
     -l, --domain-list
                 Convert Gfwlist into domain list instead of dnsmasq rules
                 (If this option is set, DNS IP/Port & ipset are not needed)
+        --extra-domain-file
+                Include extra domains from a domain list text file
+                Please put one domain in each line
     -h, --help  Usage
 ```
 
