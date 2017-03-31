@@ -176,7 +176,7 @@ process(){
 		printf '\033[31m\nFailed to fetch gfwlist.txt. Please check your Internet connection.\033[m\n'
 		clean_and_exit 2
 	fi
-	base64 --decode $BASE64_FILE > $GFWLIST_FILE || ( printf '\033[31mFailed to decode gfwlist.txt. Quit.\033[m\n'; clean_and_exit 2 )
+	base64 -d $BASE64_FILE > $GFWLIST_FILE || ( printf '\033[31mFailed to decode gfwlist.txt. Quit.\033[m\n'; clean_and_exit 2 )
 	printf ' Done.\n\n'
 
 	# Convert
