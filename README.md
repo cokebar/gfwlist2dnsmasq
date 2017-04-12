@@ -5,8 +5,6 @@ Working on both Linux-based (Debian/Ubuntu/Cent OS/OpenWrt/LEDE/Cygwin/Bash on W
 
 This script needs `sed`, `base64` and `curl`. You should have these binaries on you system.
 
-__Note: This script now lacks testing. Use carefully. Please send issues to help me debug.__
-
 ### Usage
 ```
 sh gfwlist2dnsmasq.sh [options] -o FILE
