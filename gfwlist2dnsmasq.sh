@@ -7,7 +7,7 @@
 # Website:     https://github.com/cokebar
 
 usage() {
-        cat <<-EOF
+    cat <<-EOF
 
 Usage: sh gfwlist2dnsmasq.sh [options] -o FILE
 Valid options are:
@@ -31,7 +31,7 @@ Valid options are:
     -h, --help
                 Usage
 EOF
-        exit $1
+    exit $1
 }
 
 clean_and_exit(){
