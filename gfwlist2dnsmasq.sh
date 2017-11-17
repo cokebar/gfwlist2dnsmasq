@@ -43,8 +43,12 @@ Valid options are:
     -l, --domain-list
                 Convert Gfwlist into domain list instead of dnsmasq rules
                 (If this option is set, DNS IP/Port & ipset are not needed)
+        --exclude-domain-file
+                Delete specific domains in the result from a domain list text file
+                Please put one domain per line
         --extra-domain-file
-                Include extra domains from a domain list text file
+                Include extra domains to the result from a domain list text file
+                This file will be processed after the exclude-domain-file
                 Please put one domain per line
     -h, --help
                 Usage
@@ -87,6 +91,7 @@ get_args(){
     CURL_EXTARG=''
     WITH_IPSET=0
     EXTRA_DOMAIN_FILE=''
+    EXCLUDE_DOMAIN_FILE=''
     IPV4_PATTERN='^((2[0-4][0-9]|25[0-5]|[01]?[0-9][0-9]?)\.){3}(2[0-4][0-9]|25[0-5]|[01]?[0-9][0-9]?)$'
     IPV6_PATTERN='^((([0-9A-Fa-f]{1,4}:){7}([0-9A-Fa-f]{1,4}|:))|(([0-9A-Fa-f]{1,4}:){6}(:[0-9A-Fa-f]{1,4}|((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])(\.(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])){3})|:))|(([0-9A-Fa-f]{1,4}:){5}(((:[0-9A-Fa-f]{1,4}){1,2})|:((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])(\.(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])){3})|:))|(([0-9A-Fa-f]{1,4}:){4}(((:[0-9A-Fa-f]{1,4}){1,3})|((:[0-9A-Fa-f]{1,4})?:((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])(\.(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])){3}))|:))|(([0-9A-Fa-f]{1,4}:){3}(((:[0-9A-Fa-f]{1,4}){1,4})|((:[0-9A-Fa-f]{1,4}){0,2}:((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])(\.(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])){3}))|:))|(([0-9A-Fa-f]{1,4}:){2}(((:[0-9A-Fa-f]{1,4}){1,5})|((:[0-9A-Fa-f]{1,4}){0,3}:((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])(\.(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])){3}))|:))|(([0-9A-Fa-f]{1,4}:){1}(((:[0-9A-Fa-f]{1,4}){1,6})|((:[0-9A-Fa-f]{1,4}){0,4}:((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])(\.(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])){3}))|:))|(:(((:[0-9A-Fa-f]{1,4}){1,7})|((:[0-9A-Fa-f]{1,4}){0,5}:((25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])(\.(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])){3}))|:)))(%.+)?$'
 
@@ -121,6 +126,10 @@ get_args(){
                 EXTRA_DOMAIN_FILE="$2"
                 shift
                 ;;
+			--exclude-domain-file)
+				EXCLUDE_DOMAIN_FILE="$2"
+				shift
+				;;
             *)
                 _red "Invalid argument: $1"
                 usage 1
@@ -178,6 +187,11 @@ get_args(){
         _yellow 'WARNING:\nExtra domain file does not exist, ignored.\n\n'
         EXTRA_DOMAIN_FILE=''
     fi
+
+    if [ ! -z $EXCLUDE_DOMAIN_FILE ] && [ ! -f $EXCLUDE_DOMAIN_FILE ]; then
+        _yellow 'WARNING:\nExclude domain file does not exist, ignored.\n\n'
+        EXCLUDE_DOMAIN_FILE=''
+    fi
 }
 
 process(){
@@ -224,6 +238,16 @@ process(){
     # Add twimg.edgesuite.net
     printf 'twimg.edgesuite.net\n' >> $DOMAIN_FILE
     printf 'twimg.edgesuite.net... ' && _green 'Added\n'
+
+    # Delete exclude domains
+    if [ ! -z $EXTRA_DOMAIN_FILE ]; then
+        for line in $(cat $EXCLUDE_DOMAIN_FILE)
+        do
+            EXCLUDE_PATTERN="^${line}$"
+            sed -i "/${EXCLUDE_PATTERN}/d" $DOMAIN_FILE
+        done
+        printf 'Domains in exclude domain file '$EXCLUDE_DOMAIN_FILE'... ' _green 'Deleted.'
+    fi
 
     # Add extra domains
     if [ ! -z $EXTRA_DOMAIN_FILE ]; then
