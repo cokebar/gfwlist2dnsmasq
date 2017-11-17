@@ -246,7 +246,7 @@ process(){
             EXCLUDE_PATTERN="^${line}$"
             sed -i "/${EXCLUDE_PATTERN}/d" $DOMAIN_FILE
         done
-        printf 'Domains in exclude domain file '$EXCLUDE_DOMAIN_FILE'... ' _green 'Deleted.'
+        printf 'Domains in exclude domain file '$EXCLUDE_DOMAIN_FILE'... ' && _green 'Deleted\n'
     fi
 
     # Add extra domains
