@@ -126,10 +126,10 @@ get_args(){
                 EXTRA_DOMAIN_FILE="$2"
                 shift
                 ;;
-			--exclude-domain-file)
-				EXCLUDE_DOMAIN_FILE="$2"
-				shift
-				;;
+           --exclude-domain-file)
+                EXCLUDE_DOMAIN_FILE="$2"
+                shift
+                ;;
             *)
                 _red "Invalid argument: $1"
                 usage 1
