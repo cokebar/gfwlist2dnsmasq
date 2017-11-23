@@ -2,7 +2,7 @@
 
 # Name:        gfwlist2dnsmasq.sh
 # Desription:  A shell script which convert gfwlist into dnsmasq rules.
-# Version:     0.6.3 (2017.04.03)
+# Version:     0.7.0 (2017.11.23)
 # Author:      Cokebar Chi
 # Website:     https://github.com/cokebar
 
