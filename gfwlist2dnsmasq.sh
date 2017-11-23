@@ -288,9 +288,9 @@ main() {
     if [ -z "$1" ]; then
         usage 0
     else
-        _green '\nJob Started.\n\n'
         check_depends
         get_args "$@"
+        _green '\nJob Started.\n\n'
         process
     fi
 }
