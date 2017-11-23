@@ -253,8 +253,8 @@ process(){
     # Add extra domains
     if [ ! -z $EXTRA_DOMAIN_FILE ]; then
         cat $EXTRA_DOMAIN_FILE >> $DOMAIN_FILE
+        printf 'Extra domain file '$EXTRA_DOMAIN_FILE'... ' && _green 'Added\n'
     fi
-    printf 'Extra domain file '$EXTRA_DOMAIN_FILE'... ' && _green 'Added\n'
 
     if [ $OUT_TYPE = 'DNSMASQ_RULES' ]; then
     # Convert domains into dnsmasq rules
