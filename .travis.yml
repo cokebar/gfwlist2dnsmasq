@@ -9,11 +9,6 @@ notifications:
   email: false
 language: c
 compiler: gcc
-env:
-  global:
-  - PACKAGE=gfwlist2dnsmasq
-  - USER=cokebar
-  - REPO=gfwlist2dnsmasq
 script:
 - mkdir -p $TRAVIS_BUILD_DIR/output
 - ./gfwlist2dnsmasq.sh -l -o ./output/gfwlist_domain.txt
