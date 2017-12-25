@@ -25,6 +25,6 @@ script:
 - git diff
 - git commit -a -m "Configuration Files Generated on [$DATE_TIME]"
 - git log
-- git push -fq origin gh-pages
+- git push -fq origin gh-pages > /dev/null 2>&1 || exit 1
 - echo -e "Uploaded files to gh-pages\n"
 - cd -
