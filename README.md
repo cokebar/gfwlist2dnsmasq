@@ -35,7 +35,9 @@ Valid options are:
 
 ### OpenWRT / LEDE Usage
 
-For OpenWrt/LEDE system, `base64` and `curl` may not be included into the system by default. For security reason, this script won't bypass the certificate validation. So you should install ca-certificates as well. For LEDE users, you should install ca-bundle in addition:
+For OpenWrt/LEDE, `base64` and `curl` may not be included into the system by default. So you should install them first.
+
+For security reason, this script won't bypass HTTPS certificate validation. So you should install ca-certificates. For LEDE users, you should install ca-bundle in addition.
 
 ```
 # OpenWrt
@@ -47,3 +49,13 @@ opkg install coreutils-base64 curl ca-certificates ca-bundle
 ```
 
 If you really want to bypass the certificate validation, use '-i' or '--insecure' option. You should know this is insecure.
+
+### Generated Configuration Files [![Build Status](https://travis-ci.org/cokebar/gfwlist2dnsmasq.svg?branch=master)](https://travis-ci.org/cokebar/gfwlist2dnsmasq)
+
+If you don't want to generate dnsmasq configuration file by yourself, you can directly download them:
+
+- gfwlist to dnsmasq rule file without ipset: https://cokebar.github.io/gfwlist2dnsmasq/dnsmasq_gfwlist.conf
+
+- gfwlist to dnsmasq rule file with ipset: https://cokebar.github.io/gfwlist2dnsmasq/dnsmasq_gfwlist_ipset.conf
+
+- gfwlist to domain list file: https://cokebar.github.io/gfwlist2dnsmasq/gfwlist_domain.txt
