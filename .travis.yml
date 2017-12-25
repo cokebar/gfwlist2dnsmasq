@@ -1,14 +1,8 @@
 #filename:.travis.yml
-dist: trusty
+dist: xential
 sudo: false
-cache:
-  bundler: true
-  directories:
-  - cache/
 notifications:
   email: false
-language: c
-compiler: gcc
 env:
   global:
   - USER=cokebar
@@ -22,10 +16,15 @@ script:
 - cd /tmp/
 - git clone https://${USER}:${TOKEN}@github.com/${USER}/${REPO}.git --branch gh-pages --single-branch gh-pages > /dev/null 2>&1 || exit 1
 - cd gh-pages || exit 1
+- ls -a
 - git config user.name "cokebar"
 - git config user.email "cokebar@cokebar.info"
 - cp $TRAVIS_BUILD_DIR/output/* .
+- ls -a
 - git add -A
+- git diff
 - git commit -a -m "Configuration Files Generated on [$DATE_TIME]"
-- git push -fq origin gh-pages > /dev/null 2>&1 || exit 1
+- git log
+- git push -fq origin gh-pages
 - echo -e "Uploaded files to gh-pages\n"
+- cd -
