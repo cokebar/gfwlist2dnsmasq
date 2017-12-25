@@ -50,7 +50,7 @@ opkg install coreutils-base64 curl ca-certificates ca-bundle
 
 If you really want to bypass the certificate validation, use '-i' or '--insecure' option. You should know this is insecure.
 
-### Generated Configuration Files
+### Generated Configuration Files [![Build Status](https://travis-ci.org/cokebar/gfwlist2dnsmasq.svg?branch=master)](https://travis-ci.org/cokebar/gfwlist2dnsmasq)
 
 If you don't want to generate dnsmasq configuration file by yourself, you can directly download them:
 
