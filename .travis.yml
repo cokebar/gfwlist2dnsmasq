@@ -1,0 +1,23 @@
+#filename:.travis.yml
+dist: trusty
+sudo: false
+cache:
+  bundler: true
+  directories:
+  - cache/
+notifications:
+  email: false
+language: c
+compiler: gcc
+env:
+  global:
+  - PACKAGE=gfwlist2dnsmasq
+  - USER=cokebar
+  - REPO=gfwlist2dnsmasq
+script:
+- mkdir -p $TRAVIS_BUILD_DIR/output
+- ./gfwlist2dnsmasq.sh -l -o ./output/gfwlist_domain.txt
+- ./gfwlist2dnsmasq.sh -o ./output/dnsmasq_gfwlist.conf
+- ./gfwlist2dnsmasq.sh -s gfwlist -o ./output/dnsmasq_gfwlist_ipset.conf
+- cd output
+- ls -a
