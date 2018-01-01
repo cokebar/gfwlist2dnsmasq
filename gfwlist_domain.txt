@@ -1580,6 +1580,7 @@ free4u.com.ar
 freealim.com
 freebrowser.org
 freechal.com
+freechinaforum.org
 freechina.net
 freeddns.com
 freeddns.org
@@ -2090,6 +2091,7 @@ gumroad.com
 gunsamerica.com
 gunsandammo.com
 gun-world.net
+guo.media
 guruonline.hk
 gutteruncensored.com
 gvlib.com
@@ -2541,6 +2543,7 @@ javmoo.xyz
 javseen.com
 javtag.com
 javzoo.com
+ja.wikipedia.org
 jbtalks.cc
 jbtalks.com
 jbtalks.my
@@ -3665,6 +3668,7 @@ raggedbanner.com
 raidcall.com.tw
 raidtalk.com.tw
 rainbowplan.org
+raindrop.io
 raizoji.or.jp
 ramcity.com.au
 rangwang.biz
@@ -4007,6 +4011,7 @@ sopcast.org
 sorazone.net
 sorting-algorithms.com
 sos.org
+sosreader.com
 sostibet.org
 soubory.com
 soulcaliburhentai.net
