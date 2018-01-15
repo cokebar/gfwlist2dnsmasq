@@ -132,6 +132,7 @@ acevpn.com
 acg18.me
 acgkj.com
 ac.jiruan.net
+acmedia365.com
 acmetoy.com
 acnw.com.au
 actfortibet.org
@@ -344,6 +345,7 @@ avmoo.com
 avmoo.net
 avmoo.pw
 avmo.pw
+av.movie
 av.nightlife141.com
 avoision.com
 avyahoo.com
@@ -857,6 +859,7 @@ chinayuanmin.org
 chinesedaily.com
 chinesedailynews.com
 chinesedemocracy.com
+chinese.donga.com
 chinese.engadget.com
 chinesegay.org
 chinese-hermit.net
@@ -1136,6 +1139,7 @@ dharamsalanet.com
 dharmakara.net
 dhcp.biz
 diaoyuislands.org
+dictionary.goo.ne.jp
 digiland.tw
 digisfera.com
 digitalnomadsproject.org
@@ -2975,6 +2979,7 @@ miroguide.com
 mirrorbooks.com
 mist.vip
 mitao.com.tw
+mitbbsau.com
 mitbbs.com
 mixero.com
 mixpod.com
@@ -2985,6 +2990,7 @@ mjlsh.usc.cuhk.edu.hk
 mk5000.com
 mlcool.com
 mmaaxx.com
+mm-cg.com
 m.me
 mmmca.com
 mnewstv.com
@@ -3480,6 +3486,8 @@ phosphation13.rssing.com
 photodharma.net
 photofocus.com
 phuquocservices.com
+picacomiccn.com
+picacomic.com
 picasaweb.com
 picidae.net
 picturedip.com
@@ -3751,7 +3759,6 @@ roboforex.com
 robustnessiskey.com
 rocket-inc.net
 rocksdb.org
-roc-taiwan.org
 rojo.com
 rolia.net
 ronjoneswriter.com
@@ -4171,7 +4178,6 @@ taiwanbible.com
 taiwancon.com
 taiwandaily.net
 taiwandc.org
-taiwanembassy.org
 taiwanjobs.gov.tw
 taiwanjustice.com
 taiwankiss.com
@@ -4181,7 +4187,6 @@ taiwannation.com.tw
 taiwanncf.org.tw
 taiwannews.com.tw
 taiwan-sex.com
-taiwantoday.tw
 taiwantp.net
 taiwantt.org.tw
 taiwanus.net
@@ -4617,6 +4622,7 @@ tw.jiepang.com
 tw.knowledge.yahoo.com
 tw.mall.yahoo.com
 tw.mobi.yahoo.com
+tw.money.yahoo.com
 tw.myblog.yahoo.com
 tw.news.yahoo.com
 twnorth.org.tw
@@ -5321,7 +5327,7 @@ zootool.com
 zoozle.net
 zozotown.com
 zpn.im
-zshare.net
+zspeeder.me
 zsrhao.com
 zuobiao.me
 zuo.la
