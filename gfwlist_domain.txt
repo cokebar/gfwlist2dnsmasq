@@ -10,6 +10,7 @@
 12vpn.com
 12vpn.net
 141hongkong.com
+141jj.com
 141tube.com
 1688.com.au
 173ng.com
@@ -1079,6 +1080,7 @@ dalailamavisit.org.nz
 dalailamaworld.com
 dalianmeng.org
 daliulian.org
+danbooru.donmai.us
 danke4china.net
 danwei.org
 daodu14.jigsy.com
@@ -3106,6 +3108,7 @@ mypopescu.com
 my-private-network.co.uk
 my-proxy.com
 myradio.hk
+myreadingmanga.info
 mysecondarydns.com
 myshare.url.com.tw
 mysinablog.com
@@ -3751,6 +3754,7 @@ riku.me
 rileyguide.com
 riseup.net
 ritouki.jp
+ritter.vg
 rlwlw.com
 rmjdw132.info
 rmjdw.com
@@ -4101,6 +4105,7 @@ sto.cc
 stoporganharvesting.org
 stoptibetcrisis.net
 storagenewsletter.com
+store.steampowered.com
 stories.google
 storify.com
 stormmediagroup.com
