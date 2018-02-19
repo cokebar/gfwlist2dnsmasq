@@ -337,6 +337,7 @@ autodraw.com
 avaaz.org
 avbody.tv
 avcity.tv
+av.com
 avcool.com
 avdb.in
 avdb.tv
@@ -959,6 +960,7 @@ cn.sandscotaicentral.com
 cn.shafaqna.com
 cn.streetvoice.com
 cn.uncyclopedia.wikia.com
+cn.uptodown.com
 cn.voa.mobi
 coat.co.jp
 cochina.co
@@ -3910,6 +3912,7 @@ shenzhoufilm.com
 sherabgyaltsen.com
 shiatv.net
 shicheng.org
+shiksha.com
 shinychan.com
 shipcamouflage.com
 shireyishunjian.com
@@ -4998,7 +5001,6 @@ winning11.com
 winwhispers.info
 wiredbytes.com
 wiredpen.com
-wireshark.org
 wisdompubs.org
 wisevid.com
 withgoogle.com
