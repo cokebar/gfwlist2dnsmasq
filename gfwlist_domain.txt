@@ -301,7 +301,6 @@ arethusa.su
 ar.hao123.com
 arlingtoncemetery.mil
 army.mil
-arstechnica.com
 art4tibet1998.org
 artofpeacefoundation.org
 artsy.net
@@ -723,6 +722,7 @@ casinobellini.com
 casinoking.com
 casinoriva.com
 casino.williamhill.com
+castbox.fm
 catch22.net
 catfightpayperview.xxx
 catholic.org.hk
@@ -3356,6 +3356,7 @@ onion.city
 onlinecha.com
 online.recoveryversion.org
 onlineyoutube.com
+onlytweets.com
 onmoon.com
 onmoon.net
 onmypc.biz
@@ -3648,6 +3649,7 @@ qanote.com
 qgirl.com.tw
 qhigh.com
 qiandao.today
+qiangyou.org
 qidian.ca
 qienkuen.org
 qi-gong.me
@@ -3884,6 +3886,7 @@ sftuk.org
 shadeyouvpn.com
 shadow.ma
 shadowsky.xyz
+shadowsocks9.com
 shadowsocks.asia
 shadowsocks.com
 shadowsocks.com.hk
@@ -4252,6 +4255,7 @@ telegramdownload.com
 telegram.me
 telegram.org
 telegraph.co.uk
+telesco.pe
 tellme.pw
 tenacy.com
 tensorflow.org
