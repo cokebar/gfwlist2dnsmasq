@@ -74,7 +74,7 @@ clean_and_exit(){
 check_depends(){
     which sed base64 curl >/dev/null
     if [ $? != 0 ]; then
-        _red 'Error: Missing Dependency.\nPlease check whether you have the following binaries on you system:\nsed, base64, curl.\n'
+        _red 'Error: Missing Dependency.\nPlease check whether you have the following binaries on you system:\nwhich, sed, base64, curl.\n'
         exit 3
     fi
 
