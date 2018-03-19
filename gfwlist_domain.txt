@@ -742,6 +742,7 @@ cclife.ca
 cclifefl.org
 cclife.org
 ccthere.com
+cctmweb.net
 cctongbao.com
 ccue.ca
 ccue.com
@@ -2321,6 +2322,7 @@ https443.org
 huaglad.com
 huanghuagang.org
 huangyiyu.com
+huaren4us.com
 huaren.us
 huashangnews.com
 huaxiabao.org
@@ -2939,7 +2941,6 @@ mgstage.com
 mh4u.org
 m.hkgalden.com
 mhradio.org
-m.huaren4us.com
 michaelanti.com
 michaelmarketl.com
 microvpn.com
@@ -5179,6 +5180,7 @@ xskywalker.net
 xtube.com
 xuchao.net
 xuchao.org
+xuehua.us
 xuzhiyong.net
 xvideo.cc
 xvideos.com
