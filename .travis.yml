@@ -5,7 +5,6 @@ notifications:
   email: false
 env:
   global:
-  - GIT_USER=cokebar
   - REPO=gfwlist2dnsmasq
 script:
 - mkdir -p $TRAVIS_BUILD_DIR/output
