@@ -473,6 +473,7 @@ bitc.bme.emory.edu
 bitcointalk.org
 bit.do
 bit.ly
+bitmex.com
 bitshare.com
 bitsnoop.com
 bitvise.com
@@ -1125,6 +1126,7 @@ delcamp.net
 delicious.com
 democrats.org
 demo.opera-mini.net
+depositphotos.com
 derekhsu.homeip.net
 de-sci.org
 desc.se
@@ -1310,6 +1312,7 @@ efksoft.com
 efukt.com
 e-gold.com
 e-hentaidb.com
+e-hentai.org
 eic-av.com
 e-info.org.tw
 eireinikotaerukai.com
@@ -1724,7 +1727,6 @@ gdzf.org
 geek-art.net
 geekerhome.com
 geekheart.info
-g.e-hentai.org
 gekikame.com
 gelbooru.com
 geocities.co.jp
@@ -1775,6 +1777,7 @@ globalmuseumoncommunism.org
 globalrescue.net
 globaltm.org
 globalvoicesonline.org
+globalvoices.org
 globalvpn.net
 glock.com
 gloryhole.com
@@ -2543,6 +2546,7 @@ jav2be.com
 jav68.tv
 javakiba.org
 javbus.com
+jav.com
 javfor.me
 javhd.com
 javhip.com
@@ -2802,7 +2806,6 @@ lobsangwangyal.com
 localdomain.ws
 localpresshk.com
 lockestek.com
-lofi.e-hentai.org
 logbot.net
 logiqx.com
 londonchinese.ca
@@ -4293,6 +4296,7 @@ thetibetcenter.org
 thetibetconnection.org
 thetibetmuseum.org
 thetibetpost.com
+thetinhat.com
 thetrotskymovie.com
 thevivekspot.com
 thewgo.org
@@ -5004,6 +5008,7 @@ wingamestore.com
 wingy.site
 winning11.com
 winwhispers.info
+wire.com
 wiredbytes.com
 wiredpen.com
 wisdompubs.org
@@ -5302,6 +5307,7 @@ zhao.1984.city
 zhao.jinhai.de
 zh.ecdm.wikia.com
 zhenghui.org
+zhengjian.org
 zhengwunet.org
 zhenlibu1984.com
 zhenlibu.info
