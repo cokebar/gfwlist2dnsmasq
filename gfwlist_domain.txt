@@ -263,6 +263,7 @@ aofriend.com.au
 aojiao.org
 aolchannels.aol.com
 aomiwang.com
+apartments.com
 apetube.com
 api.ai
 apiary.io
@@ -468,11 +469,13 @@ bignews.org
 bigsound.org
 biliworld.com
 billypan.com
+binance.com
 binux.me
 bipic.net
 bitc.bme.emory.edu
 bitcointalk.org
 bit.do
+bitfinex.com
 bit.ly
 bitmex.com
 bitshare.com
@@ -726,6 +729,7 @@ casinoriva.com
 casino.williamhill.com
 castbox.fm
 catch22.net
+catchgod.com
 catfightpayperview.xxx
 catholic.org.hk
 catholic.org.tw
@@ -855,6 +859,7 @@ chinatopsex.com
 chinatown.com.au
 chinatweeps.com
 china.ucanews.com
+chinaview.wordpress.com
 chinaway.org
 china-week.com
 chinaworker.info
@@ -2203,6 +2208,7 @@ himalayanglacier.com
 himemix.com
 himemix.net
 hi-on.org.tw
+hitbtc.com
 hitomi.la
 hiwifi.com
 hizb-ut-tahrir.info
@@ -2795,6 +2801,7 @@ liuhanyu.com
 liujianshu.com
 liuxiaobo.net
 liuxiaotong.com
+livecoin.net
 livedoor.jp
 liveleak.com
 livestation.com
@@ -3345,6 +3352,7 @@ oikos.com.tw
 oiktv.com
 oizoblog.com
 okayfreedom.com
+okex.com
 okk.tw
 ok.ru
 old-cat.net
@@ -4857,6 +4865,7 @@ vpncup.com
 vpndada.com
 vpnfan.com
 vpnfire.com
+vpnfires.biz
 vpnforgame.net
 vpngate.jp
 vpngate.net
@@ -5158,6 +5167,7 @@ xiaolan.me
 xiaoma.org
 xiezhua.com
 xihua.es
+xijie.wordpress.com
 xing.com
 xinhuanet.org
 xinmiao.com.hk
@@ -5294,6 +5304,7 @@ zaobao.com.sg
 zaozon.com
 zapto.org
 zattoo.com
+zb.com
 zdnet.com.tw
 zello.com
 zengjinyan.org
