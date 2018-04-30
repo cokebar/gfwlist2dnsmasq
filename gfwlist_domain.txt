@@ -178,6 +178,7 @@ akademiye.org
 akamaihd.net
 akiba-online.com
 akiba-web.com
+akow.org
 alabout.com
 alanhou.com
 alarab.qa
@@ -293,9 +294,11 @@ appsto.re
 app.tutanota.com
 archive.fo
 archive.is
+archive.li
 archive.org
 archives.gov
 archives.gov.tw
+archive.today
 arctosia.com
 areca-backup.org
 arena.taipei
@@ -667,6 +670,7 @@ btdigg.org
 btku.me
 btku.org
 btspread.com
+btsynckeys.com
 budaedu.org
 buddhanet.com.tw
 buddhistchannel.tv
@@ -908,6 +912,7 @@ cienen.com
 cineastentreff.de
 cipfg.org
 circlethebayfortibet.org
+cirosantilli.com
 citizencn.com
 citizenlab.org
 citizenscommission.hk
@@ -976,6 +981,7 @@ cochina.org
 code1984.com
 codeshare.io
 codeskulptor.org
+coinegg.com
 collateralmurder.com
 collateralmurder.org
 comefromchina.com
@@ -1009,6 +1015,7 @@ cpj.org
 cq99.us
 crackle.com
 crazys.cc
+crazyshit.com
 crchina.org
 crd-net.org
 creaders.net
@@ -1713,6 +1720,7 @@ gardennetworks.com
 gardennetworks.org
 g-area.org
 gartlive.com
+gate.io
 gate-project.com
 gather.com
 gatherproxy.com
@@ -1773,6 +1781,7 @@ giga-web.jp
 gigporno.ru
 girlbanker.com
 gist.github.com
+github.com
 git.io
 gizlen.net
 gjczz.com
@@ -2481,6 +2490,7 @@ iownyour.org
 ipalter.com
 i-part.com.tw
 ipfire.org
+ipfs.io
 iphone4hongkong.com
 iphonehacks.com
 iphonetaiwan.org
@@ -3316,7 +3326,6 @@ nvquan.org
 nvtongzhisheng.org
 nwtca.org
 nyaa.eu
-nyaa.si
 nydus.ca
 nylon-angel.com
 nylonstockingsonline.com
@@ -3458,6 +3467,7 @@ partypoker.com
 passion.com
 passiontimes.hk
 pastebin.com
+paste.ee
 pastie.org
 pbs.org
 pbwiki.com
@@ -3978,6 +3988,7 @@ sipml5.org
 sis001.com
 sis001.us
 sis.xxx
+site2unblock.com
 site90.net
 sitebro.tw
 sitekreator.com
@@ -4167,6 +4178,7 @@ superfreevpn.com
 superokayama.com
 superpages.com
 supervpn.net
+superzooi.com
 suppig.net
 suprememastertv.com
 surfeasy.com
@@ -4263,6 +4275,7 @@ tcsovi.org
 teachparentstech.org
 teamamericany.com
 tech2.in.com
+techviz.net
 teck.in
 teeniefuck.net
 teensinasia.com
@@ -4313,6 +4326,7 @@ thetinhat.com
 thetrotskymovie.com
 thevivekspot.com
 thewgo.org
+theync.com
 th.hao123.com
 thinkingtaiwan.com
 thinkwithgoogle.com
