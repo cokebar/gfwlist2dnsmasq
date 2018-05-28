@@ -782,6 +782,7 @@ cdn.helixstudios.net
 cdn-images.mailchimp.com
 cdninstagram.com
 cdn.printfriendly.com
+cdn.seatguru.com
 cdn.softlayer.net
 cdp1989.org
 cdp1998.org
@@ -986,6 +987,7 @@ cnproxy.com
 cn.sandscotaicentral.com
 cn.shafaqna.com
 cn.streetvoice.com
+cn.thegay.com
 cn.uncyclopedia.wikia.com
 cn.uptodown.com
 cn.voa.mobi
@@ -1087,6 +1089,7 @@ dadi360.com
 dafagood.com
 dafahao.com
 dafoh.org
+daftporn.com
 dagelijksestandaard.nl
 daidostup.ru
 dailidaili.com
@@ -1759,6 +1762,7 @@ gaybubble.com
 gaycn.net
 gayhub.com
 gaymap.cc
+gaymenring.com
 gaytube.com
 gaywatch.com
 gazotube.com
@@ -2135,6 +2139,7 @@ greenpeace.org
 greenreadings.com
 greenvpn.net
 greenvpn.org
+grotty-monday.com
 groups.google.cn
 gs-discuss.com
 gstatic.com
@@ -2177,6 +2182,7 @@ hacg.red
 hacken.cc
 hacker.org
 hackthatphone.net
+hahaxixi.github.io
 hahlo.com
 hakkatv.org.tw
 handcraftedsoftware.org
@@ -2197,6 +2203,7 @@ hd.stheadline.com
 hdtvb.net
 hdzog.com
 heartyit.com
+heavy-r.com
 hecaitou.net
 hechaji.com
 hec.su
@@ -2347,6 +2354,7 @@ hotspotshield.com
 hotvpn.com
 hougaige.com
 howtoforge.com
+hoxx.com
 hpa.gov.tw
 hqcdp.org
 hqjapanesesex.com
@@ -3067,9 +3075,11 @@ mobypicture.com
 moby.to
 moeaic.gov.tw
 moeerolibrary.com
+mofa.gov.tw
 mofaxiehui.com
 mofos.com
 mog.com
+mohu.ml
 mol.gov.tw
 molihua.org
 mondex.org
@@ -3890,6 +3900,7 @@ savevid.com
 say2.info
 sbme.me
 sbs.com.au
+scache.vzw.com
 scasino.com
 schema.org
 sciencenets.com
@@ -4137,6 +4148,7 @@ sproxy.info
 squirly.info
 srcf.ucam.org
 srocket.us
+ss7.vzw.com
 ss.carryzhou.com
 ssglobal.co
 ssglobal.me
@@ -4162,6 +4174,7 @@ static01.nyt.com
 static.comico.tw
 static-economist.com
 staticflickr.com
+static.shemalez.com
 statueofdemocracy.org
 stc.com.sa
 steamcommunity.com
@@ -4202,6 +4215,7 @@ sugobbs.com
 sugumiru18.com
 suissl.com
 sujiatun.wordpress.com
+sukebei.nyaa.si
 sulian.me
 summify.com
 sumrando.com
@@ -4479,6 +4493,7 @@ time.com
 times.hinet.net
 timesofindia.indiatimes.com
 timsah.com
+tineye.com
 tintuc101.com
 tiny.cc
 tinychat.com
@@ -4493,6 +4508,9 @@ tmdfish.com
 t.me
 tmi.me
 tmpp.org
+tn1.shemalez.com
+tn2.shemalez.com
+tn3.shemalez.com
 tnaflix.com
 tngrnow.com
 tngrnow.net
@@ -4576,6 +4594,7 @@ tube.com
 tubecup.com
 tubegals.com
 tubeislam.com
+tubepornclassic.com
 tubestack.com
 tubewolf.com
 tuibeitu.net
@@ -4888,6 +4907,7 @@ vivahentai4u.net
 vivatube.com
 vivthomas.com
 vizvaz.com
+vjav.com
 vjmedia.com.hk
 vllcs.org
 vlog.xuite.net
@@ -5010,6 +5030,7 @@ webworkerdaily.com
 weekmag.info
 wefightcensorship.org
 wefong.com
+wego.here.com
 weiboleak.com
 weiboscope.jmsc.hku.hk
 weihuo.org
@@ -5317,6 +5338,7 @@ yobit.net
 yobt.com
 yobt.tv
 yogichen.org
+yolasite.com
 yong.hu
 yorkbbs.ca
 youdontcare.com
