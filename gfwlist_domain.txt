@@ -291,6 +291,7 @@ appsocks.net
 appspot.com
 appsto.re
 app.tutanota.com
+aptoide.com
 archive.fo
 archive.is
 archive.li
@@ -451,7 +452,6 @@ bestvpnserver.com
 bestvpnservice.com
 bestvpnusa.com
 bet365.com
-beta.usejump.com
 betfair.com
 betternet.co
 bettervpn.com
@@ -479,6 +479,7 @@ billypan.com
 binance.com
 binux.me
 bipic.net
+bird.so
 bitc.bme.emory.edu
 bitcointalk.org
 bitcoinworld.com
@@ -1183,6 +1184,7 @@ dharmakara.net
 dhcp.biz
 diaoyuislands.org
 dictionary.goo.ne.jp
+difangwenge.org
 digiland.tw
 digisfera.com
 digitalnomadsproject.org
@@ -1598,6 +1600,7 @@ flipkart.com
 flitto.com
 flnet.org
 flog.tw
+flyvpn.com
 fochk.org
 focustaiwan.tw
 focusvpn.com
@@ -1768,6 +1771,7 @@ gaywatch.com
 gazotube.com
 gcc.org.hk
 gclooney.com
+gcmasia.com
 g.co
 gcpnews.com
 gcr.io
@@ -1795,6 +1799,7 @@ getiton.com
 getjetso.com
 getlantern.org
 getmdl.io
+getoutline.org
 getsocialscope.com
 getsync.com
 gettrials.com
@@ -2471,6 +2476,7 @@ igvita.com
 ihakka.net
 ihao.org
 iicns.com
+iipdigital.usembassy.gov
 ikstar.com
 ikwb.com
 i.lithium.com
@@ -2706,6 +2712,7 @@ karmapa.org
 karmapa-teachings.org
 ka-wai.com
 kawaiikawaii.jp
+kawase.com
 kba-tx.org
 kb.monitorware.com
 kcoolonline.com
@@ -3494,14 +3501,12 @@ palacemoon.com
 paldengyal.com
 paljorpublications.com
 paltalk.com
-panacom.co.jp
 panamapapers.sueddeutsche.de
 pandapow.co
 pandapow.net
 pandavpn-jp.com
 pandora.com
 pandora.tv
-pangci.net
 panluan.net
 panoramio.com
 pao-pao.net
@@ -4016,6 +4021,7 @@ sidelinessportseatery.com
 sierrafriendsoftibet.org
 sijihuisuo.club
 sijihuisuo.com
+sikaozhe1997.github.io
 silkbook.com
 simbolostwitter.com
 simplecd.org
@@ -4325,6 +4331,7 @@ tcpspeed.co
 tcpspeed.com
 tcsofbc.org
 tcsovi.org
+tdm.com.mo
 teachparentstech.org
 teamamericany.com
 tech2.in.com
@@ -4345,7 +4352,9 @@ tellme.pw
 tenacy.com
 tensorflow.org
 tenzinpalmo.com
+terminus2049.github.io
 tew.org
+textnow.me
 t-g.com
 thaicn.com
 thb.gov.tw
@@ -4770,6 +4779,7 @@ uighur.narod.ru
 uighur.nl
 ukcdp.co.uk
 ukliferadio.co.uk
+uku.im
 ulike.net
 ulop.net
 ultravpn.fr
