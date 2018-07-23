@@ -292,6 +292,7 @@ appledaily.com
 appledaily.com.hk
 appledaily.com.tw
 appshopper.com
+app.smartmailcloud.com
 appsocks.net
 appspot.com
 appsto.re
@@ -2865,6 +2866,7 @@ lightnovel.cn
 like.com
 limiao.net
 line-apps.com
+linear-abematv.akamaized.net
 line.me
 line.naver.jp
 line-scdn.net
@@ -3125,6 +3127,7 @@ monitorchina.org
 monster.com
 moodyz.com
 moonbbs.com
+moonbingo.com
 morningsun.org
 moroneta.com
 mos.ru
@@ -5415,6 +5418,7 @@ youtubeeducation.com
 youtubegaming.com
 youtube-nocookie.com
 youversion.com
+youwin.com
 youxu.info
 yt.be
 ytht.net
