@@ -216,6 +216,7 @@ alwaysdata.com
 alwaysdata.net
 alwaysvpn.com
 am730.com.hk
+amazon.co.jp
 amazon.com
 ameblo.jp
 americangreencard.com
@@ -402,6 +403,7 @@ bbc.com
 bbc.co.uk
 bb-chat.tv
 bbchat.tv
+bbci.co.uk
 bbc.in
 bbg.gov
 bbkz.com
@@ -3287,13 +3289,11 @@ newlandmagazine.com.au
 newnews.ca
 news100.com.tw
 newsancai.com
-news.bbc.co.uk
 newschinacomment.org
 newscn.org
 news.cnyes.com
 newsdetox.ca
 newsdh.com
-newsforums.bbc.co.uk
 news.hk.msn.com
 news.hkpeanut.com
 news.msn.com.tw
@@ -3364,6 +3364,7 @@ nordvpn.com
 notify.dropboxapi.com
 nottinghampost.com
 novelasia.com
+now.com
 now.im
 nownews.com
 nowtorrents.com
@@ -3647,6 +3648,7 @@ playpcesor.com
 plays.com.tw
 plm.org.hk
 plunder.com
+plurk.com
 plus28.com
 plusbb.com
 pmatehunter.com
@@ -3658,6 +3660,7 @@ pokerstars.com
 pokerstars.net
 politicalchina.org
 politicalconsultation.org
+politiscales.net
 poloniex.com
 polymerhk.com
 polymer-project.org
@@ -4007,6 +4010,7 @@ shadow.ma
 shadowsky.xyz
 shadowsocks9.com
 shadowsocks.asia
+shadowsocks.be
 shadowsocks.com
 shadowsocks.com.hk
 shadowsocks.org
