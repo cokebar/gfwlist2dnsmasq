@@ -122,6 +122,7 @@ abchinese.com
 abclite.net
 abc.pp.ru
 abc.xyz
+abematv.akamaized.net
 abitno.linpie.com
 ablwang.com
 aboluowang.com
@@ -388,6 +389,7 @@ bandwagonhost.com
 bangbrosnetwork.com
 bangchen.net
 bangyoulater.com
+bankmobilevibe.com
 bannedbook.org
 bannednews.org
 banorte.com
@@ -963,6 +965,7 @@ cleansite.biz
 cleansite.info
 cleansite.us
 clearharmony.net
+clearsurance.com
 clearwisdom.net
 clementine-player.org
 cling.omy.sg
@@ -971,6 +974,7 @@ clipfish.de
 cloakpoint.com
 cloud.mail.ru
 club1069.com
+cmcn.org
 cmi.org.tw
 cmp.hku.hk
 cms.gov
@@ -3118,6 +3122,7 @@ mofa.gov.tw
 mofaxiehui.com
 mofos.com
 mog.com
+mohu.club
 mohu.ml
 mol.gov.tw
 molihua.org
@@ -3865,6 +3870,7 @@ reutersmedia.net
 revleft.com
 revver.com
 rfachina.com
+rfalive1.akacast.akamaistream.net
 rfamobile.org
 rfa.org
 rfaweb.org
@@ -4978,6 +4984,7 @@ voatibetan.com
 voatibetanenglish.com
 vocativ.com
 vocn.tv
+vod-abematv.akamaized.net
 vod.wwe.com
 vot.org
 vovo2000.com
