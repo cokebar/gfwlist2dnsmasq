@@ -909,6 +909,7 @@ chinese.irib.ir
 chinese-leaders.org
 chinese-memorial.org
 chinesen.de
+chinesenews.net.au
 chinesepen.org
 chinese.soifind.com
 chinesetalks.net
@@ -1087,6 +1088,7 @@ culture.tw
 cumlouder.com
 curvefish.com
 cusu.hk
+cutscenes.net
 cw.com.tw
 cyberghost.natado.com
 cyberghostvpn.com
@@ -1311,6 +1313,7 @@ duplicati.com
 dupola.com
 dupola.net
 dushi.ca
+dvdpac.com
 dvorak.org
 dw.com
 dw.de
@@ -3357,6 +3360,7 @@ nlfreevpn.com
 nobelprize.org
 nobel.se
 nobodycanstop.us
+nofile.io
 no-ip.org
 nokogiri.org
 nokola.com
@@ -3720,6 +3724,7 @@ privatetunnel.com
 privatevpn.com
 procopytips.com
 prosiben.de
+protonvpn.com
 provideocoalition.com
 provpnaccounts.com
 proxfree.com
@@ -3827,6 +3832,7 @@ rawgit.com
 rawgithub.com
 raw.githubusercontent.com
 razyboard.com
+rcam.target.com
 rcinet.ca
 rconversation.blogs.com
 rd.com
@@ -3848,6 +3854,10 @@ recoveryversion.com.tw
 redballoonsolidarity.org
 redchinacn.net
 redchinacn.org
+redd.it
+reddit.com
+redditmedia.com
+redditstatic.com
 redhotlabs.com
 red-lang.org
 redtube.com
@@ -3898,6 +3908,7 @@ ronjoneswriter.com
 roodo.com
 rosechina.net
 rotten.com
+rsdlmonitor.com
 rsf-chinese.org
 rsf.org
 rsgamen.org
@@ -4213,6 +4224,7 @@ ss-link.com
 ssl.webpack.de
 sspro.ml
 ss.pythonic.life
+ssrshare.com
 sss.camp
 sstmlt.moe
 sstmlt.net
@@ -4388,6 +4400,7 @@ techviz.net
 teck.in
 teco-hk.org
 teco-mo.org
+teddysun.com
 teeniefuck.net
 teensinasia.com
 telecomspace.com
@@ -4734,6 +4747,7 @@ twibase.com
 twibble.de
 twibbon.com
 twibs.com
+twicountry.org
 twicsy.com
 twiends.com
 twifan.com
@@ -4868,6 +4882,7 @@ upornia.com
 uproxy.org
 upwill.org
 ur7s.com
+uraban.me
 urbansurvival.com
 urchin.com
 urlborg.com
@@ -4958,6 +4973,7 @@ vincnd.com
 vine.co
 vinniev.com
 vip-enterprise.com
+virtualrealporn.com
 visibletweets.com
 vital247.org
 viu.com
@@ -5035,6 +5051,7 @@ vporn.com
 vpser.net
 vraiesagesse.net
 vrmtr.com
+vrsmash.com
 vtunnel.com
 vuku.cc
 w3schools.com
@@ -5241,7 +5258,6 @@ www.aolnews.com
 www.businessinsider.com.au
 www.citizenlab.org
 www.cmoinc.org
-www.coinexchange.io
 www.cool18.com
 www.dmm.com
 www.dwheeler.com
@@ -5301,6 +5317,7 @@ xfinity.com
 xfm.pp.ru
 xgmyd.com
 xhamster.com
+xianba.net
 xianchawang.net
 xianjian.tw
 xianqiao.net
@@ -5335,6 +5352,7 @@ xn--4gq171p.com
 xn--czq75pvv1aj5c.org
 xn--i2ru8q2qg.com
 xn--ngstr-lra8j.com
+xn--oiq.cc
 xn--p8j9a0d9c9a.xn--q9jyb4c
 xnxx.com
 xpdo.net
@@ -5449,6 +5467,7 @@ yzzk.com
 zacebook.com
 zalmos.com
 zannel.com
+zaobao.com
 zaobao.com.sg
 zaozon.com
 zapto.org
