@@ -72,10 +72,19 @@ clean_and_exit(){
 }
 
 check_depends(){
-    which sed base64 curl >/dev/null
+    which sed base64 >/dev/null
     if [ $? != 0 ]; then
-        _red 'Error: Missing Dependency.\nPlease check whether you have the following binaries on you system:\nwhich, sed, base64, curl.\n'
+        _red 'Error: Missing Dependency.\nPlease check whether you have the following binaries on you system:\nwhich, sed, base64.\n'
         exit 3
+    fi
+    which curl >/dev/null
+    if [ $? != 0 ]; then
+        which wget >/dev/null
+        if [ $? != 0 ]; then
+            _red 'Error: Missing Dependency.\nEither curl or wget required.\n'
+            exit 3
+        fi
+        USE_WGET=1
     fi
 
     SYS_KERNEL=`uname -s`
@@ -95,6 +104,7 @@ get_args(){
     IPSET_NAME=''
     FILE_FULLPATH=''
     CURL_EXTARG=''
+    WGET_EXTARG=''
     WITH_IPSET=0
     EXTRA_DOMAIN_FILE=''
     EXCLUDE_DOMAIN_FILE=''
@@ -111,6 +121,7 @@ get_args(){
                 ;;
             --insecure | -i)
                 CURL_EXTARG='--insecure'
+                WGET_EXTARG='--no-check-certificate'
                 ;;
             --dns | -d)
                 DNS_IP="$2"
@@ -213,7 +224,11 @@ process(){
 
     # Fetch GfwList and decode it into plain text
     printf 'Fetching GfwList... '
-    curl -s -L $CURL_EXTARG -o$BASE64_FILE $BASE_URL
+    if [ $USE_WGET != 1 ]; then
+        curl -s -L $CURL_EXTARG -o$BASE64_FILE $BASE_URL
+    else
+        wget -q $WGET_EXTARG -O$BASE64_FILE $BASE_URL
+    fi
     if [ $? != 0 ]; then
         _red '\nFailed to fetch gfwlist.txt. Please check your Internet connection.\n'
         clean_and_exit 2
