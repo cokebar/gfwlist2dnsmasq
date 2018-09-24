@@ -120,6 +120,7 @@ aamacau.com
 abc.com
 abchinese.com
 abclite.net
+abc.net.au
 abc.pp.ru
 abc.xyz
 abematv.akamaized.net
@@ -1559,10 +1560,12 @@ fatbtc.com
 favstar.fm
 fawanghuihui.org
 faydao.com
+fbaddins.com
 fbcdn.net
 fb.com
 fb.me
 fbsbx.com
+fbworkmail.com
 fc2blog.net
 fc2china.com
 fc2cn.com
@@ -2639,6 +2642,7 @@ jamyangnorbu.com
 jandyx.com
 janwongphoto.com
 japanfirst.asianfreeforum.com
+japantimes.co.jp
 japan-whores.com
 jav101.com
 jav2be.com
@@ -3915,6 +3919,7 @@ rsgamen.org
 rssmeme.com
 rtalabel.org
 rthk.hk
+rthklive2-lh.akamaihd.net
 rthk.org.hk
 rti.org.tw
 rtycminnesota.org
@@ -3987,6 +3992,7 @@ secure.hustler.com
 secure.logmein.com
 secure.raxcdn.com
 securetunnel.com
+securityinabox.org
 securitykiss.com
 seed4.me
 seesmic.com
@@ -4294,6 +4300,7 @@ sunta.com.tw
 sunvpn.net
 sunwinism.joinbbs.net
 suoluo.org
+supchina.com
 superfreevpn.com
 superokayama.com
 superpages.com
@@ -4770,6 +4777,7 @@ twistory.net
 twit2d.com
 twitbrowser.net
 twitcause.com
+twitch.tv
 twitgether.com
 twitgoo.com
 twitiq.com
