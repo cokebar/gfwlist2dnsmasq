@@ -1640,6 +1640,7 @@ fofg.org
 fofldfradio.org
 fooooo.com
 footwiball.com
+foreignpolicy.com
 forum4hk.com
 forum.baby-kingdom.com
 forum.cyberctm.com
@@ -2867,6 +2868,7 @@ lflinkup.org
 lhakar.org
 lhasocialwork.org
 liangyou.net
+liangzhichuanmei.com
 lianyue.net
 liaowangxizang.net
 liberal.org.hk
@@ -3652,6 +3654,7 @@ pixelqi.com
 pixiv.net
 pixnet.net
 pk.com
+pki.goog
 placemix.com
 playboy.com
 playboyplus.com
@@ -4151,6 +4154,7 @@ sobees.com
 socialwhale.com
 sockscap64.com
 sockslist.net
+socks-proxy.net
 soc.mil
 socrec.org
 sodatea.github.io
@@ -5217,6 +5221,7 @@ woopie.tv
 wordpress.com
 workatruna.com
 workerdemo.org.hk
+workerempowerment.org
 workersthebig.net
 worldcat.org
 worldjournal.com
