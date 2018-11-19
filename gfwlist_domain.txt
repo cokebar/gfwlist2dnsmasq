@@ -278,6 +278,7 @@ api.dropboxapi.com
 apigee.com
 api.linksalpha.com
 api.proxlet.com
+api.pureapk.com
 api.recaptcha.net
 api-secure.recaptcha.net
 api-verify.recaptcha.net
@@ -446,6 +447,7 @@ beaconevents.com
 bebo.com
 beeg.com
 beevpn.com
+behance.net
 behindkink.com
 beijing1989.com
 beijingspring.com
@@ -713,6 +715,7 @@ buzzhand.com
 buzzhand.net
 buzzorange.com
 bvpn.com
+bwh1.net
 bwsj.hk
 bx.in.th
 bx.tl
@@ -1064,6 +1067,7 @@ crd-net.org
 creaders.net
 creadersnet.com
 creativelab5.com
+crisisresponse.google
 cristyli.com
 crocotube.com
 crossfire.co.kr
@@ -2180,6 +2184,7 @@ greenvpn.net
 greenvpn.org
 grotty-monday.com
 groups.google.cn
+grow.google
 gs-discuss.com
 gsp.target.com
 gstatic.com
@@ -2407,6 +2412,7 @@ hrcchina.org
 hrcir.com
 hrea.org
 hrichina.org
+hrtsea.com
 hrweb.org
 hrw.org
 hsjp.net
@@ -2432,6 +2438,7 @@ huaxin.ph
 hua-yue.net
 huayuworld.org
 hudatoriq.web.id
+hudson.org
 huffingtonpost.com
 hugoroy.eu
 huhaitai.com
@@ -2561,6 +2568,7 @@ insidevoa.com
 instagram.com
 instanthq.com
 institut-tibetain.org
+international-news.newsmagazine.asia
 internetdefenseleague.org
 internetfreedom.org
 internet.org
@@ -2710,6 +2718,7 @@ joyourself.com
 jp.hao123.com
 jpl.nasa.gov
 jpopforum.net
+jtvnw.net
 jubushoushen.com
 juhuaren.com
 jukujo-club.com
@@ -3165,6 +3174,7 @@ mrbonus.com
 mrface.com
 mrslove.com
 mrtweet.com
+msa-it.org
 msguancha.com
 msha.gov
 m.slandr.net
@@ -3518,6 +3528,7 @@ orient-doll.com
 orn.jp
 orzistic.org
 osfoora.com
+otcbtc.com
 otnd.org
 otto.de
 otzo.com
@@ -3718,9 +3729,11 @@ powercx.com
 powerphoto.org
 prayforchina.net
 premeforwindows7.com
+premproxy.com
 presentationzen.com
 presidentlee.tw
 prestige-av.com
+pride.google
 prisoneralert.com
 pritunl.com
 privacybox.de
@@ -3901,6 +3914,8 @@ rileyguide.com
 riseup.net
 ritouki.jp
 ritter.vg
+rixcloud.com
+rixcloud.us
 rlwlw.com
 rmjdw132.info
 rmjdw.com
@@ -3945,6 +3960,7 @@ sacom.hk
 sadistic-v.com
 sadpanda.us
 safervpn.com
+safety.google
 sa.hao123.com
 saintyculture.com
 saiq.me
@@ -4235,6 +4251,7 @@ ssl.webpack.de
 sspro.ml
 ss.pythonic.life
 ssrshare.com
+ssr.tools
 sss.camp
 sstmlt.moe
 sstmlt.net
@@ -4316,6 +4333,7 @@ surfeasy.com
 surfeasy.com.au
 suroot.com
 surrenderat20.net
+sustainability.google
 suyangg.com
 svsfx.com
 swagbucks.com
@@ -4351,6 +4369,7 @@ taiwandaily.net
 taiwandc.org
 taiwanjobs.gov.tw
 taiwanjustice.com
+taiwanjustice.net
 taiwankiss.com
 taiwannation.50webs.com
 taiwannation.com
@@ -4668,6 +4687,7 @@ tsu.org.tw
 tt1069.com
 tt-rss.org
 tttan.com
+ttvnw.net
 tu8964.com
 tubaholic.com
 tube8.com
@@ -4781,6 +4801,7 @@ twistory.net
 twit2d.com
 twitbrowser.net
 twitcause.com
+twitchcdn.net
 twitch.tv
 twitgether.com
 twitgoo.com
@@ -4846,6 +4867,7 @@ udn.com
 udn.com.tw
 uforadio.com.tw
 ufreevpn.com
+ug.m.wikipedia.org
 ugo.com
 uhdwallpapers.org
 uhrp.org
@@ -5502,6 +5524,7 @@ zhangtianliang.com
 zhanlve.org
 zhao.1984.city
 zhao.jinhai.de
+zh.bitterwinter.org
 zh.ecdm.wikia.com
 zhenghui.org
 zhengjian.org
@@ -5517,6 +5540,7 @@ zhongguotese.net
 zhongmeng.org
 zhoushuguang.com
 zh.pokerstrategy.com
+zh.pttpedia.wikia.com
 zhreader.com
 zhuangbi.me
 zhuanxing.cn
