@@ -3,7 +3,7 @@ A shell script which convert gfwlist into dnsmasq rules.
 
 Working on both Linux-based (Debian/Ubuntu/Cent OS/OpenWrt/LEDE/Cygwin/Bash on Windows/etc.) and BSD-based (FreeBSD/Mac OS X/etc.) system.
 
-This script needs `sed`, `base64` and `curl`. You should have these binaries on you system.
+This script needs `sed`, `base64`, `curl`(or`wget`). You should have these binaries on you system.
 
 ### Usage
 ```
