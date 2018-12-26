@@ -37,7 +37,8 @@ Valid options are:
 
 ( For LEDE 17.01/ OpenWrt 18.06 and later)
 
-To download gfwlist `curl` or `wget` is needed. Because the connection is HTTPS, if you use busybox `wget`, you need to install `libustream-openssl` or `libustream-mbedtls` to support it, otherwise use GNU `wget`
+To download gfwlist `curl` or `wget` is needed. Because the connection is HTTPS, if you use busybox `wget`, you need to install `libustream-openssl` or `libustream-mbedtls` to support it, otherwise use GNU `wget`.
+
 Because gfwlist is encoded by BASE64, `base64` is needed to decode.
 
 ```
