@@ -33,19 +33,27 @@ Valid options are:
     -h, --help  Usage
 ```
 
-### OpenWRT / LEDE Usage
+### OpenWRT Usage
 
-For OpenWrt/LEDE, `base64` and `curl` may not be included into the system by default. So you should install them first.
+( For LEDE 17.01/ OpenWrt 18.06 and later)
 
-For security reason, this script won't bypass HTTPS certificate validation. So you should install ca-certificates. For LEDE users, you should install ca-bundle in addition.
+To download gfwlist `curl` or `wget` is needed. Because the connection is HTTPS, if you use `wget`, you need to install `libustream-openssl` or `libustream-mbedtls` to support it.
+Because gfwlist is encoded by BASE64, `base64` is needed to decode.
 
 ```
-# OpenWrt
+# curl
 opkg update
-opkg install coreutils-base64 curl ca-certificates
-# LEDE
+opkg install curl coreutils-base64
+# wget
 opkg update
-opkg install coreutils-base64 curl ca-certificates ca-bundle
+opkg install wget libustream-mbedtls coreutils-base64
+```
+
+For security reason, this script won't bypass HTTPS certificate validation. So you should install ca-certificates and ca-bundle in addition.
+
+```
+opkg update
+opkg install ca-certificates ca-bundle
 ```
 
 If you really want to bypass the certificate validation, use '-i' or '--insecure' option. You should know this is insecure.
