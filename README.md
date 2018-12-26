@@ -37,16 +37,19 @@ Valid options are:
 
 ( For LEDE 17.01/ OpenWrt 18.06 and later)
 
-To download gfwlist `curl` or `wget` is needed. Because the connection is HTTPS, if you use `wget`, you need to install `libustream-openssl` or `libustream-mbedtls` to support it.
+To download gfwlist `curl` or `wget` is needed. Because the connection is HTTPS, if you use busybox `wget`, you need to install `libustream-openssl` or `libustream-mbedtls` to support it, otherwise use GNU `wget`
 Because gfwlist is encoded by BASE64, `base64` is needed to decode.
 
 ```
 # curl
 opkg update
 opkg install curl coreutils-base64
-# wget
+# busybox wget (default by OpenWrt)
 opkg update
-opkg install wget libustream-mbedtls coreutils-base64
+opkg install libustream-mbedtls coreutils-base64
+# GNU wget
+opkg update
+opkg install wget coreutils-base64
 ```
 
 For security reason, this script won't bypass HTTPS certificate validation. So you should install ca-certificates and ca-bundle in addition.
