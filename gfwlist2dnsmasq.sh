@@ -85,6 +85,8 @@ check_depends(){
             exit 3
         fi
         USE_WGET=1
+    else
+        USE_WGET=0
     fi
 
     SYS_KERNEL=`uname -s`
@@ -224,7 +226,7 @@ process(){
 
     # Fetch GfwList and decode it into plain text
     printf 'Fetching GfwList... '
-    if [ $USE_WGET != 1 ]; then
+    if [ -z $USE_WGET ]; then
         curl -s -L $CURL_EXTARG -o$BASE64_FILE $BASE_URL
     else
         wget -q $WGET_EXTARG -O$BASE64_FILE $BASE_URL
