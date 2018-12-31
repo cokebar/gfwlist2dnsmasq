@@ -232,7 +232,7 @@ process(){
         wget -q $WGET_EXTARG -O$BASE64_FILE $BASE_URL
     fi
     if [ $? != 0 ]; then
-        _red '\nFailed to fetch gfwlist.txt. Please check your Internet connection.\n'
+        _red '\nFailed to fetch gfwlist.txt. Please check your Internet connection, and check TLS support for curl/wget.\n'
         clean_and_exit 2
     fi
     $BASE64_DECODE $BASE64_FILE > $GFWLIST_FILE || ( _red 'Failed to decode gfwlist.txt. Quit.\n'; clean_and_exit 2 )
