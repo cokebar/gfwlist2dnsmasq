@@ -131,6 +131,7 @@ abitno.linpie.com
 ablwang.com
 aboluowang.com
 aboutgfw.com
+about.google
 abs.edu
 accim.org
 aceros-de-hispania.com
@@ -260,6 +261,7 @@ anontext.com
 anonymise.us
 anonymitynetwork.com
 anonymizer.com
+anonymouse.org
 a-normal-day.com
 anpopo.com
 answering-islam.org
@@ -1184,6 +1186,7 @@ dastrassi.org
 data.flurry.com
 data.gov.tw
 data-vocabulary.org
+daum.net
 david-kilgour.com
 dawangidc.com
 daxa.cn
@@ -1861,6 +1864,7 @@ get.app
 getastrill.com
 getchu.com
 getcloak.com
+get.dev
 getfoxyproxy.org
 getfreedur.com
 getgom.com
@@ -2078,6 +2082,7 @@ google.co.zw
 google.cv
 google.cz
 google.de
+google.dev
 google.dj
 google.dk
 google.dm
@@ -2831,6 +2836,7 @@ kingstone.com.tw
 kink.com
 kinmen.org.tw
 kinmen.travel
+kinokuniya.com
 kir.jp
 kissbbao.cn
 kiwi.kz
@@ -3790,6 +3796,7 @@ presentationzen.com
 presidentlee.tw
 prestige-av.com
 pride.google
+prism-break.org
 prisoneralert.com
 pritunl.com
 privacybox.de
@@ -4517,6 +4524,7 @@ tenzinpalmo.com
 terminus2049.github.io
 tew.org
 textnow.me
+tfhub.dev
 t-g.com
 thaicn.com
 thb.gov.tw
