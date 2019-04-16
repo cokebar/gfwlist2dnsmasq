@@ -226,7 +226,7 @@ process(){
 
     # Fetch GfwList and decode it into plain text
     printf 'Fetching GfwList... '
-    if [ -z $USE_WGET ]; then
+    if [ $USE_WGET == 0 ]; then
         curl -s -L $CURL_EXTARG -o$BASE64_FILE $BASE_URL
     else
         wget -q $WGET_EXTARG -O$BASE64_FILE $BASE_URL
