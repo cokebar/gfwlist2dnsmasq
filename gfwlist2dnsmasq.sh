@@ -1,4 +1,4 @@
-#/bin/sh
+#!/bin/sh
 
 # Name:        gfwlist2dnsmasq.sh
 # Desription:  A shell script which convert gfwlist into dnsmasq rules.
