@@ -4956,7 +4956,6 @@ udn.com
 udn.com.tw
 uforadio.com.tw
 ufreevpn.com
-ug.m.wikipedia.org
 ugo.com
 uhdwallpapers.org
 uhrp.org
@@ -5298,6 +5297,7 @@ wikilivres.info
 wikimapia.org
 wiki.moegirl.org
 wiki.oauth.net
+wikipedia.org
 wiki.phonegap.com
 wikiwiki.jp
 wildammo.com
@@ -5370,7 +5370,6 @@ wuguoguang.com
 wujieliulan.com
 wujie.net
 wukangrui.net
-wuu.wikipedia.org
 wuw.red
 wuyanblog.com
 wwitv.com
@@ -5627,7 +5626,6 @@ zhenlibu1984.com
 zhenlibu.info
 zhenxiang.biz
 zhinengluyou.com
-zh.m.wikipedia.org
 zhongguo.ca
 zhongguorenquan.org
 zhongguotese.net
@@ -5642,9 +5640,7 @@ zhuatieba.com
 zhuichaguoji.org
 zh.uncyclopedia.wikia.com
 zh.wikinews.org
-zh.wikipedia.org
 zh.wikisource.org
-zh-yue.wikipedia.org
 ziddu.com
 zillionk.com
 zim.vn
