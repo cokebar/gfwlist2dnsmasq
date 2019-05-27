@@ -116,6 +116,7 @@
 99cn.info
 9bis.com
 9bis.net
+9gag.com
 a248.e.akamai.net
 a5.com.ru
 aamacau.com
@@ -903,6 +904,7 @@ china-mmm.net
 china-mmm.sa.com
 chinamule.com
 chinamz.org
+chinanewscenter.com
 chinapost.com.tw
 chinapress.com.my
 china-review.com.ua
@@ -1632,6 +1634,7 @@ ffvpn.com
 fgmtv.net
 fgmtv.org
 fhreports.net
+fiddle.jshell.net
 figprayer.com
 fileflyer.com
 files2me.com
@@ -2937,6 +2940,7 @@ library.usc.cuhk.edu.hk
 lidecheng.com
 lifemiles.com
 lighten.org.tw
+lighti.me
 lightnovel.cn
 lihkg.com
 like.com
@@ -3713,6 +3717,7 @@ pinimg.com
 pinkrod.com
 pinoy-n.com
 pinterest.at
+pinterest.ca
 pinterest.co.kr
 pinterest.com
 pinterest.co.uk
@@ -3744,6 +3749,7 @@ plunder.com
 plurk.com
 plus28.com
 plusbb.com
+plus.codes
 pmatehunter.com
 pmates.com
 po2b.com
@@ -3788,6 +3794,7 @@ post76.com
 post852.com
 postadult.com
 postimg.org
+potato.im
 potvpn.com
 powerapple.com
 power.com
@@ -4134,6 +4141,7 @@ shambalapost.com
 shambhalasun.com
 shangfang.org
 shapeservices.com
+share.america.gov
 sharebee.com
 sharecool.org
 share.dmhy.org
@@ -4773,7 +4781,6 @@ tsquare.tv
 tsunagarumon.com
 tsu.org.tw
 tt1069.com
-tt-rss.org
 tttan.com
 ttvnw.net
 tu8964.com
