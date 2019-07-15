@@ -726,6 +726,7 @@ bullog.org
 bunbunhk.com
 busayari.com
 businessinsider.com
+businesstoday.com.tw
 businessweek.com
 busu.org
 busytrade.com
@@ -1252,6 +1253,7 @@ dingchin.com.tw
 dipity.com
 directcreative.com
 discoins.com
+disconnect.me
 discordapp.com
 discordapp.net
 discuss4u.com
@@ -1279,6 +1281,7 @@ dns2.us
 dnscrypt.org
 dns-dns.com
 dnset.com
+dns.google
 dnsrd.com
 dnssec.net
 dns-stuff.com
@@ -1437,6 +1440,7 @@ emule-ed2k.com
 emulefans.com
 emuparadise.me
 enanyang.my
+encyclopedia.com
 enewstree.com
 enfal.de
 en.favotter.net
@@ -4079,7 +4083,6 @@ s-cute.com
 s-dragon.org
 seapuff.com
 search.aol.com
-search.disconnect.me
 searchtruth.com
 search.xxx
 search.yahoo.co.jp
