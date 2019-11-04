@@ -1289,6 +1289,7 @@ dnssec.net
 dns-stuff.com
 dnvod.tv
 doctorvoice.org
+documentingreality.com
 dogfartnetwork.com
 dojin.com
 dok-forum.net
@@ -2250,6 +2251,7 @@ guaguass.org
 guancha.org
 guaneryu.com
 guangming.com.my
+guangnianvpn.com
 guardster.com
 gu-chu-sum.org
 guishan.org
@@ -2950,6 +2952,7 @@ lifemiles.com
 lighten.org.tw
 lighti.me
 lightnovel.cn
+lightyearvpn.com
 lihkg.com
 like.com
 limiao.net
