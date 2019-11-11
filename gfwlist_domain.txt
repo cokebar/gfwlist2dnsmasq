@@ -94,6 +94,7 @@
 66.ca
 6park.com
 6parker.com
+6parknews.com
 7capture.com
 7cow.com
 85cc.net
@@ -370,6 +371,7 @@ avdb.in
 avdb.tv
 av-e-body.com
 avfantasy.com
+avg.com
 avgle.com
 avidemux.org
 avmoo.com
@@ -1274,6 +1276,7 @@ dlsite.com
 dlyoutube.com
 dm530.net
 dmcdn.net
+dmhy.org
 dmm.co.jp
 dns04.com
 dns05.com
@@ -1626,6 +1629,7 @@ fdc64.org
 fdc89.jp
 feedburner.com
 feeds.fileforum.com
+feedx.net
 feelssh.com
 feer.com
 feifeiss.com
@@ -2288,6 +2292,7 @@ hahaxixi.github.io
 hahlo.com
 hakkatv.org.tw
 handcraftedsoftware.org
+hanime.tv
 hanunyi.com
 haoel.github.io
 hao.news
@@ -3908,6 +3913,7 @@ quranexplorer.com
 qusi8.net
 qvodzy.org
 qxbbs.org
+qz.com
 r18.com
 radicalparty.org
 radiko.jp
@@ -5224,6 +5230,7 @@ wapedia.mobi
 warbler.iconfactory.net
 waselpro.com
 washeng.net
+washingtonpost.com
 watch8x.com
 watchinese.com
 watchmygf.net
