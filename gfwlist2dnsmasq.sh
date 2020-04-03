@@ -192,7 +192,7 @@ get_args(){
         if [ -z $IPSET_NAME ]; then
             WITH_IPSET=0
         else
-            IPSET_TEST=$(echo $IPSET_NAME | grep -E '^\w+$')
+            IPSET_TEST=$(echo $IPSET_NAME | grep -E '^\w+(,\w+)*$')
             if [ "$IPSET_TEST" != "$IPSET_NAME" ]; then
                 _red 'Error: Please enter a valid IP set name.\n'
                 exit 1
