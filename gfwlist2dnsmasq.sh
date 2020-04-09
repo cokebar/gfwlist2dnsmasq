@@ -243,7 +243,7 @@ process(){
     HEAD_FILTER_PATTERN='s#^(\|\|?)?(https?://)?##g'
     TAIL_FILTER_PATTERN='s#/.*$|%2F.*$##g'
     DOMAIN_PATTERN='([a-zA-Z0-9][-a-zA-Z0-9]*(\.[a-zA-Z0-9][-a-zA-Z0-9]*)+)'
-    HANDLE_WILDCARD_PATTERN='s#^(([a-zA-Z0-9]*\*[-a-zA-Z0-9]*)?(\.))?([a-zA-Z0-9][-a-zA-Z0-9]*(\.[a-zA-Z0-9][-a-zA-Z0-9]*)+)(\*)?#\4#g'
+    HANDLE_WILDCARD_PATTERN='s#^(([a-zA-Z0-9]*\*[-a-zA-Z0-9]*)?(\.))?([a-zA-Z0-9][-a-zA-Z0-9]*(\.[a-zA-Z0-9][-a-zA-Z0-9]*)+)(\*[a-zA-Z0-9]*)?#\4#g'
 
     printf 'Converting GfwList to ' && _green $OUT_TYPE && printf ' ...\n' 
     _yellow '\nWARNING:\nThe following lines in GfwList contain regex, and might be ignored:\n\n'
