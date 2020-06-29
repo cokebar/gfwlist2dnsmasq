@@ -283,11 +283,18 @@ process(){
     # Convert domains into dnsmasq rules
         if [ $WITH_IPSET -eq 1 ]; then
             _green 'Ipset rules included.'
-            sort -u $DOMAIN_FILE | $SED_ERES 's#(.+)#server=/\1/'$DNS_IP'\#'$DNS_PORT'\
-ipset=/\1/'$IPSET_NAME'#g' > $CONF_TMP_FILE
+            if [ $DNS_PORT -eq 53 ]; then
+                sort -u $DOMAIN_FILE | $SED_ERES 's#(.+)#server=/\1/'$DNS_IP'\nipset=/\1/'$IPSET_NAME'#' > $CONF_TMP_FILE
+            else
+                sort -u $DOMAIN_FILE | $SED_ERES 's#(.+)#server=/\1/'$DNS_IP'\#'$DNS_PORT'\nipset=/\1/'$IPSET_NAME'#' > $CONF_TMP_FILE
+            fi
         else
             _green 'Ipset rules not included.'
-            sort -u $DOMAIN_FILE | $SED_ERES 's#(.+)#server=/\1/'$DNS_IP'\#'$DNS_PORT'#g' > $CONF_TMP_FILE
+            if [ $DNS_PORT -eq 53 ]; then
+                sort -u $DOMAIN_FILE | $SED_ERES 's#(.+)#server=/\1/'$DNS_IP'#' > $CONF_TMP_FILE
+            else
+                sort -u $DOMAIN_FILE | $SED_ERES 's#(.+)#server=/\1/'$DNS_IP'\#'$DNS_PORT'#' > $CONF_TMP_FILE
+            fi
         fi
 
         # Generate output file
