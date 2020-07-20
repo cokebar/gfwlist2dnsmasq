@@ -274,6 +274,7 @@ antichristendom.com
 antiwave.net
 anyporn.com
 anysex.com
+ao3.org
 aobo.com.au
 aofriend.com
 aofriend.com.au
@@ -317,6 +318,8 @@ aptoide.com
 archive.fo
 archive.is
 archive.li
+archiveofourown.com
+archiveofourown.org
 archive.org
 archives.gov
 archives.gov.tw
@@ -754,6 +757,7 @@ cacnw.com
 cactusvpn.com
 cafepress.com
 cahr.org.tw
+caijinglengyan.com
 calameo.com
 calebelston.com
 calgarychinese.ca
@@ -1004,7 +1008,6 @@ cling.omy.sg
 clinica-tibet.ru
 clipfish.de
 cloakpoint.com
-cloud.feedly.com
 cloud.mail.ru
 club1069.com
 clyp.it
@@ -1116,7 +1119,6 @@ csuchen.de
 csw.org.uk
 ctao.org
 ctfriend.net
-cthlo.github.io
 ctitv.com.tw
 ct.org.tw
 cts.com.tw
@@ -1260,6 +1262,8 @@ discoins.com
 disconnect.me
 discordapp.com
 discordapp.net
+discord.com
+discord.gg
 discuss4u.com
 discuss.com.hk
 dish.com
@@ -1628,6 +1632,7 @@ fdc64.de
 fdc64.org
 fdc89.jp
 feedburner.com
+feedly.com
 feeds.fileforum.com
 feedx.net
 feelssh.com
@@ -1829,6 +1834,7 @@ g6hentai.com
 gabocorp.com
 gaeproxy.com
 gaforum.org
+gagaoolala.com
 galaxymacau.com
 galenwu.com
 galstars.net
@@ -1917,6 +1923,8 @@ gigporno.ru
 girlbanker.com
 gist.github.com
 github.com
+github.io
+githubusercontent.com
 git.io
 gizlen.net
 gjczz.com
@@ -2288,13 +2296,11 @@ hacg.red
 hacken.cc
 hacker.org
 hackthatphone.net
-hahaxixi.github.io
 hahlo.com
 hakkatv.org.tw
 handcraftedsoftware.org
 hanime.tv
 hanunyi.com
-haoel.github.io
 hao.news
 happy-vpn.com
 haproxy.org
@@ -2506,6 +2512,7 @@ huffingtonpost.com
 hugoroy.eu
 huhaitai.com
 huhamhire.com
+huhangfei.com
 huiyi.in
 hulkshare.com
 hulu.com
@@ -2805,6 +2812,7 @@ juyuange.org
 juziyue.com
 jwmusic.org
 jyxf.net
+kadokawa.co.jp
 kagyumonlam.org
 kagyunews.com.hk
 kagyuoffice.org
@@ -3449,6 +3457,7 @@ ninjacloak.com
 ninjaproxy.ninja
 nintendium.com
 ninth.biz
+nitter.net
 niu.moe
 niusnews.com
 njactb.org
@@ -3660,6 +3669,7 @@ paper.li
 paradisehill.cc
 paradisepoker.com
 parkansky.com
+parsevideo.com
 partycasino.com
 partypoker.com
 passion.com
@@ -3917,6 +3927,7 @@ r18.com
 radicalparty.org
 radiko.jp
 radioaustralia.net.au
+radio.garden
 radiohilight.net
 radiovaticana.org
 radiovncr.com
@@ -4001,7 +4012,6 @@ rfaweb.org
 rferl.org
 rfi.fr
 rfi.my
-rg3.github.io
 rightbtc.com
 rigpa.org
 riku.me
@@ -4189,6 +4199,7 @@ shkspr.mobi
 shodanhq.com
 shooshtime.com
 shop2000.com.tw
+shopee.tw
 shopping.com
 showbiz.omy.sg
 showhaotu.com
@@ -4202,7 +4213,6 @@ sidelinessportseatery.com
 sierrafriendsoftibet.org
 sijihuisuo.club
 sijihuisuo.com
-sikaozhe1997.github.io
 silkbook.com
 simbolostwitter.com
 simplecd.org
@@ -4272,7 +4282,6 @@ sockslist.net
 socks-proxy.net
 soc.mil
 socrec.org
-sodatea.github.io
 sod.co.jp
 softether.co.jp
 softether-download.com
@@ -4551,7 +4560,6 @@ tellme.pw
 tenacy.com
 tensorflow.org
 tenzinpalmo.com
-terminus2049.github.io
 tew.org
 textnow.me
 tfhub.dev
@@ -4752,7 +4760,6 @@ top.tv
 tora.to
 tor.blingblingsquad.net
 torcn.com
-tor.cn.uptodown.com
 torguard.net
 torproject.org
 torrentprivacy.com
@@ -4765,7 +4772,6 @@ t.orzdream.com
 tosh.comedycentral.com
 totalvpn.com
 toutiaoabc.com
-toutyrater.github.io
 towngain.com
 toypark.in
 toythieves.com
@@ -5027,6 +5033,7 @@ uploadstation.com
 upmedia.mg
 upornia.com
 uproxy.org
+uptodown.com
 upwill.org
 ur7s.com
 uraban.me
@@ -5383,7 +5390,6 @@ wqyd.org
 wrchina.org
 wretch.cc
 writer.zoho.com
-wsgzao.github.io
 wsj.com
 wsjhk.com
 wsj.net
