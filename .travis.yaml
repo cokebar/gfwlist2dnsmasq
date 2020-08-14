@@ -1,0 +1,32 @@
+#filename:.travis.yml
+dist: bionic
+sudo: false
+notifications:
+email: false
+env:
+global:
+- REPO=tool
+before_script:
+- export TZ=Asia/Shanghai
+script:
+- mkdir -p $TRAVIS_BUILD_DIR/output
+- mkdir -p $TRAVIS_BUILD_DIR/tmp
+- wget -N --no-check-certificate -O ./tmp/gfwlist2dnsmasq.sh https://raw.githubusercontent.com/cokebar/gfwlist2dnsmasq/master/gfwlist2dnsmasq.sh
+- chmod +x ./tmp/gfwlist2dnsmasq.sh
+- ./tmp/gfwlist2dnsmasq.sh -l -o ./output/gfwlist_domain.rsc
+- sed -i 's/\./\\\\./g' ./output/gfwlist_domain.rsc
+- sed -i 's/^/add regexp="(\\\\.|^)&/g' ./output/gfwlist_domain.rsc
+- sed -i 's/$/&\\$" type=FWD forward-to=$gfwdns/g' ./output/gfwlist_domain.rsc
+- sed -i '1 i:local gfwdns xx.xx.xx.xx' ./output/gfwlist_domain.rsc
+- sed -i '2 i/ip dns static' ./output/gfwlist_domain.rsc
+- DATE_TIME=$(date "+%Y-%m-%d %H:%M:%S")
+- cd /tmp/
+- git clone https://${GIT_USER}:${TOKEN}@github.com/${GIT_USER}/${REPO}.git --branch gh-pages --single-branch gh-pages > /dev/null 2>&1 || exit 1
+- cd gh-pages || exit 1
+- git config user.name "XXXX"
+- git config user.email "XXXX@gmail.com"
+- cp $TRAVIS_BUILD_DIR/output/* .
+- git add -A
+- git commit -a -m "Configuration Files Generated on [$DATE_TIME]"
+- git push -fq origin gh-pages > /dev/null 2>&1 || exit 1
+- echo -e "Uploaded files to gh-pages\n"
