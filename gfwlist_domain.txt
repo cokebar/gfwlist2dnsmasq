@@ -321,6 +321,7 @@ archive.li
 archiveofourown.com
 archiveofourown.org
 archive.org
+archive.ph
 archives.gov
 archives.gov.tw
 archive.today
@@ -1348,6 +1349,7 @@ dtiblog.com
 dtic.mil
 dtwang.org
 duanzhihu.com
+dubox.com
 duck.com
 duckdns.org
 duckduckgo.com
@@ -1922,6 +1924,7 @@ giga-web.jp
 gigporno.ru
 girlbanker.com
 gist.github.com
+githubassets.com
 github.com
 github.io
 githubusercontent.com
@@ -2393,6 +2396,7 @@ hkcmi.edu
 hkcnews.com
 hkcoc.com
 hkcoc.weather.com.hk
+hkctu.org.hk
 hkdailynews.com.hk
 hkday.net
 hkdf.org
@@ -3271,6 +3275,7 @@ mswe1.org
 m-team.cc
 mthruf.com
 mtw.tl
+mubi.com
 muchosucko.com
 mullvad.net
 multiply.com
@@ -3606,6 +3611,7 @@ opendn.xyz
 openervpn.in
 openid.net
 openleaks.org
+opensource.google
 openvpn.net
 openvpn.org
 openwebster.com
@@ -3862,6 +3868,7 @@ proyectoclubes.com
 prozz.net
 psblog.name
 pscp.tv
+pshvpn.com
 psiphon3.com
 psiphon.ca
 psiphon.civisec.org
@@ -3971,6 +3978,7 @@ realforum.zkiz.com
 realitykings.com
 realraptalk.com
 realsexpass.com
+reason.com
 rebatesrule.net
 recordhistory.org
 recovery.org.tw
@@ -4101,6 +4109,7 @@ scieron.com
 scmpchinese.com
 scmp.com
 scramble.io
+scratch.mit.edu
 scribd.com
 scriptspot.com
 s-cute.com
@@ -4554,6 +4563,7 @@ telegram.dog
 telegramdownload.com
 telegram.me
 telegram.org
+telegra.ph
 telegraph.co.uk
 telesco.pe
 tellme.pw
@@ -5342,6 +5352,7 @@ wingamestore.com
 wingy.site
 winning11.com
 winwhispers.info
+wionews.com
 wire.com
 wiredbytes.com
 wiredpen.com
