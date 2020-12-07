@@ -563,7 +563,6 @@ blogger.com
 blog.google
 blog.goo.ne.jp
 blogimg.jp
-blog.inoreader.com
 blog.istef.info
 blog.jackjia.com
 blog.jp
@@ -2643,6 +2642,7 @@ initiativesforchina.org
 inkui.com
 inmediahk.net
 innermongolia.org
+inoreader.com
 inote.tw
 insecam.org
 insidevoa.com
