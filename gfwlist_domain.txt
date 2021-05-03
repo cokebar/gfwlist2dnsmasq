@@ -1,3 +1,4 @@
+000webhost.com
 030buy.com
 0rz.tw
 1000giri.net
@@ -161,6 +162,7 @@ activpn.com
 aculo.us
 adcex.com
 addictedtocoffee.de
+addyoutube.com
 adelaidebbs.com
 admin.recaptcha.net
 admob.com
@@ -257,6 +259,7 @@ amnyemachen.org
 amoiist.com
 ampproject.org
 amtb-taipei.org
+anchor.fm
 anchorfree.com
 ancsconf.org
 andfaraway.net
@@ -271,7 +274,6 @@ angelfire.com
 angola.org
 angularjs.org
 animecrazy.net
-animeshippuuden.com
 aniscartujo.com
 annatam.com
 anobii.com
@@ -1267,6 +1269,7 @@ ddns.ms
 ddns.name
 ddns.net
 ddns.us
+deadline.com
 deaftone.com
 debug.com
 deck.ly
@@ -1574,6 +1577,7 @@ etools.ncol.com
 etowns.net
 etowns.org
 e-traderland.net
+etsy.com
 ettoday.net
 etvonline.hk
 eucasino.com
@@ -3021,6 +3025,7 @@ kyoyue.com
 kyzyhello.com
 kzeng.info
 labiennale.org
+lab.skk.moe
 ladbrokes.com
 la-forum.org
 lagranepoca.com
@@ -3250,6 +3255,7 @@ meetav.com
 meetup.com
 mefeedia.com
 mefound.com
+mega.co.nz
 mega.nz
 megaproxy.com
 megarotic.com
@@ -3340,6 +3346,7 @@ mitao.com.tw
 mitbbsau.com
 mitbbs.com
 mixero.com
+mixi.jp
 mixpod.com
 mixx.com
 mizzmona.com
@@ -3570,7 +3577,7 @@ news.sinchew.com.my
 news.singtao.ca
 newstamago.com
 newstapa.org
-newstarnet.com--NN--
+newstarnet.com
 news.tvb.com
 news.tvbs.com.tw
 newsweek.com
@@ -3816,7 +3823,6 @@ ozxw.com
 ozyoyo.com
 pachosting.com
 pacificpoker.com
-packages.debian.org
 packetix.net
 pacopacomama.com
 padmanet.com
@@ -4536,6 +4542,7 @@ sourceforge.net
 sourcewadio.com
 southnews.com.tw
 southpark.cc.com
+south-plus.org
 sowers.org.hk
 soylentnews.org
 spaces.hightail.com
