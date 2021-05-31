@@ -419,6 +419,7 @@ azerimix.com
 azubu.tv
 azurewebsites.net
 b0ne.com
+babylonbee.com
 babynet.com.hk
 backchina.com
 backpackers.com.tw
@@ -2740,6 +2741,8 @@ incapdns.net
 incloak.com
 incredibox.fr
 independent.co.uk
+indiablooms.com
+indianarrative.com
 indiandefensenews.in
 indiemerch.com
 in-disguise.com
@@ -3257,6 +3260,7 @@ meetup.com
 mefeedia.com
 mefound.com
 mega.co.nz
+mega.io
 mega.nz
 megaproxy.com
 megarotic.com
