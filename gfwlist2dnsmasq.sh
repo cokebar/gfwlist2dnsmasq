@@ -104,6 +104,7 @@ check_depends(){
 get_args(){
     OUT_TYPE='DNSMASQ_RULES'
     USE_LOCALFILE=0
+    SOURCE_FILE=""
     DNS_IP='127.0.0.1'
     DNS_PORT='5353'
     IPSET_NAME=''
@@ -231,7 +232,6 @@ process(){
     DOMAIN_FILE="$TMP_DIR/gfwlist2domain.txt"
     CONF_TMP_FILE="$TMP_DIR/gfwlist.conf.tmp"
     OUT_TMP_FILE="$TMP_DIR/gfwlist.out.tmp"
-    SOURCE_FILE=""
 
     # Fetch GfwList and decode it into plain text
     printf 'Fetching GfwList... '
