@@ -44,6 +44,8 @@ Valid options are:
                 (If not given, ipset rules will not be generated.)
     -o, --output <FILE>
                 /path/to/output_filename
+    -u, --uselocalfile <FILE>
+                /path/from/gfwlist_filename
     -i, --insecure
                 Force bypass certificate validation (insecure)
     -l, --domain-list
@@ -101,6 +103,8 @@ check_depends(){
 
 get_args(){
     OUT_TYPE='DNSMASQ_RULES'
+    USE_LOCALFILE=0
+    SOURCE_FILE=""
     DNS_IP='127.0.0.1'
     DNS_PORT='5353'
     IPSET_NAME=''
@@ -139,6 +143,11 @@ get_args(){
                 ;;
             --output | -o)
                 OUT_FILE="$2"
+                shift
+                ;;
+            --uselocalfile | -u)
+                USE_LOCALFILE=1
+                SOURCE_FILE="$2"
                 shift
                 ;;
             --extra-domain-file)
@@ -226,7 +235,14 @@ process(){
 
     # Fetch GfwList and decode it into plain text
     printf 'Fetching GfwList... '
-    if [ $USE_WGET = 0 ]; then
+
+    if [ $USE_LOCALFILE = 1 ]; then
+        cp $SOURCE_FILE $BASE64_FILE
+            if [ $? != 0 ]; then
+                _red '\nFailed to copy local file. Please check your file is accessible.\n'
+                clean_and_exit 2
+            fi
+    elif [ $USE_WGET = 0 ]; then
         curl -s -L $CURL_EXTARG -o$BASE64_FILE $BASE_URL
     else
         wget -q $WGET_EXTARG -O$BASE64_FILE $BASE_URL

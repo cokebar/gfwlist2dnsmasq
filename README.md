@@ -18,6 +18,9 @@ Valid options are:
                 (If not given, ipset rules will not be generated.)
     -o, --output <FILE>
                 /path/to/output_filename
+    -u, --userlocalfile <FILE>
+                /path/from/gfwlist_filename
+                (If not given, shell will will get source online.)
     -i, --insecure
                 Force bypass certificate validation (insecure)
     -l, --domain-list
